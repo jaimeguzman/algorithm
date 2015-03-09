@@ -1,0 +1,37 @@
+AUTHOR 
+Martin Pelikan
+
+DATE
+2006
+
+TITLE
+Decision-Tree Estimation of Distribution Algorithm in C++
+
+DESCRIPTION
+This program implements an estimation of distribution algorithm 
+with decision tree probabilistic models. The algorithm does not
+assume that solutions are binary strings, every string position
+can obtain any number of values, wich is specified by the user.
+
+For references and more information on estimation of distribution 
+algorithms or decision tree models, please see the MEDAL report 
+published with this code at http://medal.cs.umsl.edu/files/2006010.pdf
+
+All user-defined functions are located in obj-function.cpp, which defines
+the objective function, the function to set the numbers of values in 
+different string positions, and the function to verify optimality.
+
+USAGE 
+dt-eda [parameter file name] [--help] [--version]
+
+LICENSE INFORMATION
+Feel free to use, modify and distribute the code for
+academic purposes with an appropriate acknowledgment of
+the source, but in all resulting publications please
+include a citation to the following publication:
+
+Martin Pelikan (2006). Implementation of the Decision-Tree 
+Estimation of Distribution Algorithm in C++. MEDAL
+Report No. 2006010, Missouri Estimation of Distribution
+Algorithms Laboratory, University of Missouri-St. Louis,
+MO.

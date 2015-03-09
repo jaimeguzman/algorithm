@@ -1,0 +1,297 @@
+\hypertarget{parse-input_8cpp}{
+\section{parse-input.cpp File Reference}
+\label{parse-input_8cpp}\index{parse-input.cpp@{parse-input.cpp}}
+}
+Necessary functions for parsing input parameter files. 
+
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include \char`\"{}parse-input.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}random.hpp\char`\"{}}\par
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{parse-input_8cpp_09f908aa6474fe2b1f82b1aaade947f6}{MAX\_\-LINE\_\-WIDTH}~1000
+\begin{CompactList}\small\item\em Maximum width of a line to read from parameter file. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{parse-input_8cpp_ecc496a88afbe998e2577dfe766dbd0e}{parse\_\-input\_\-file} (FILE $\ast$f, \hyperlink{struct_parameters}{Parameters} $\ast$params)
+\begin{CompactList}\small\item\em Parse the input file and store the results in a structure \hyperlink{struct_parameters}{Parameters}. \item\end{CompactList}\item 
+void \hyperlink{parse-input_8cpp_e30f981622da23c664e95e813953673d}{param\_\-help} ()
+\begin{CompactList}\small\item\em Print a short description of parameters. \item\end{CompactList}\item 
+int \hyperlink{parse-input_8cpp_e28f089803e889dc1c1412f56f482ee7}{get\_\-new\_\-identifier} (FILE $\ast$f, char $\ast$s)
+\begin{CompactList}\small\item\em Get a new identifier from the file and scan until after next '='. \item\end{CompactList}\item 
+int \hyperlink{parse-input_8cpp_84d83813df0dc09fd6a2a4fbfc893d03}{get\_\-int\_\-value} (FILE $\ast$f, int \&val)
+\begin{CompactList}\small\item\em Read an integer value from a file. \item\end{CompactList}\item 
+int \hyperlink{parse-input_8cpp_9d6eb3d840afb4c96f4d0e52e61c3bf7}{print\_\-parameters} (\hyperlink{struct_parameters}{Parameters} $\ast$params)
+\begin{CompactList}\small\item\em Print the parameters to stdout. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Necessary functions for parsing input parameter files. 
+
+
+
+Definition in file \hyperlink{parse-input_8cpp-source}{parse-input.cpp}.
+
+\subsection{Define Documentation}
+\hypertarget{parse-input_8cpp_09f908aa6474fe2b1f82b1aaade947f6}{
+\index{parse-input.cpp@{parse-input.cpp}!MAX_LINE_WIDTH@{MAX\_\-LINE\_\-WIDTH}}
+\index{MAX_LINE_WIDTH@{MAX\_\-LINE\_\-WIDTH}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[MAX\_\-LINE\_\-WIDTH]{\setlength{\rightskip}{0pt plus 5cm}\#define MAX\_\-LINE\_\-WIDTH~1000}}
+\label{parse-input_8cpp_09f908aa6474fe2b1f82b1aaade947f6}
+
+
+Maximum width of a line to read from parameter file. 
+
+
+
+Definition at line 15 of file parse-input.cpp.
+
+Referenced by get\_\-int\_\-value(), and parse\_\-input\_\-file().
+
+\subsection{Function Documentation}
+\hypertarget{parse-input_8cpp_84d83813df0dc09fd6a2a4fbfc893d03}{
+\index{parse-input.cpp@{parse-input.cpp}!get_int_value@{get\_\-int\_\-value}}
+\index{get_int_value@{get\_\-int\_\-value}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[get\_\-int\_\-value]{\setlength{\rightskip}{0pt plus 5cm}int get\_\-int\_\-value (FILE $\ast$ {\em f}, int \& {\em val})}}
+\label{parse-input_8cpp_84d83813df0dc09fd6a2a4fbfc893d03}
+
+
+Read an integer value from a file. 
+
+
+
+Definition at line 166 of file parse-input.cpp.
+
+References MAX\_\-LINE\_\-WIDTH.
+
+Referenced by parse\_\-input\_\-file().
+
+\begin{Code}\begin{verbatim}167 {
+168   char line[MAX_LINE_WIDTH];
+169   fgets(line,MAX_LINE_WIDTH,f);
+170   sscanf(line,"%u",&val);
+171 
+172   return 1;
+173 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{parse-input_8cpp_e28f089803e889dc1c1412f56f482ee7}{
+\index{parse-input.cpp@{parse-input.cpp}!get_new_identifier@{get\_\-new\_\-identifier}}
+\index{get_new_identifier@{get\_\-new\_\-identifier}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[get\_\-new\_\-identifier]{\setlength{\rightskip}{0pt plus 5cm}int get\_\-new\_\-identifier (FILE $\ast$ {\em f}, char $\ast$ {\em s})}}
+\label{parse-input_8cpp_e28f089803e889dc1c1412f56f482ee7}
+
+
+Get a new identifier from the file and scan until after next '='. 
+
+
+
+Definition at line 105 of file parse-input.cpp.
+
+Referenced by parse\_\-input\_\-file().
+
+\begin{Code}\begin{verbatim}106 {
+107   char c=0;
+108   int n=0;
+109   int done=0;
+110 
+111   while ((!feof(f))&&(!done))
+112     {
+113       c=fgetc(f);
+114       if (((c>='a')&&(c<='z'))||
+115           ((c>='A')&&(c<='Z'))||
+116           (c=='_'))
+117         done=1;
+118     }
+119 
+120   if (done)
+121     {
+122       s[0]=c;
+123       n=1;
+124       done=0;
+125       while ((!feof(f))&&(!done)) 
+126         {
+127           c=fgetc(f);
+128           if (((c>='a')&&(c<='z'))||
+129               ((c>='A')&&(c<='Z'))||
+130               (c=='_'))
+131             s[n++]=c;
+132           else 
+133             done=1;
+134         };
+135       s[n]='\0';
+136 
+137       if (c=='=')
+138         done=1;
+139       else
+140         done=0;
+141 
+142       while ((!feof(f))&&(!done))
+143         {
+144           c=fgetc(f);
+145           if (c=='=')
+146             done=1;
+147         };
+148       
+149       if (!done)
+150         {
+151           printf("Expected '=' after identifier %s\n",s);
+152           exit(-1);
+153         }
+154 
+155       return 1;
+156     }
+157 
+158   return 0;
+159 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{parse-input_8cpp_e30f981622da23c664e95e813953673d}{
+\index{parse-input.cpp@{parse-input.cpp}!param_help@{param\_\-help}}
+\index{param_help@{param\_\-help}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[param\_\-help]{\setlength{\rightskip}{0pt plus 5cm}void param\_\-help ()}}
+\label{parse-input_8cpp_e30f981622da23c664e95e813953673d}
+
+
+Print a short description of parameters. 
+
+
+
+Definition at line 83 of file parse-input.cpp.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}84 {
+85   printf("List of parameters for input file (you can specify any subset):\n\n");
+86 
+87   printf("  -> Population size:\n      population_size = <number>\n\n");
+88   printf("  -> Problem size (number of characters):\n      problem_size = <number>\n\n");
+89   printf("  -> Maximum number of generations:\n      max_generations = <number>\n\n");
+90   printf("  -> Replacement (0=restricted tournament repl., 1=full repl.):\n      replacement = <number>\n\n");
+91   printf("  -> Tournament size for tournament selection:\n      tournament_size = <number>\n\n");
+92   printf("  -> Use bisection to optimize the population size:\n      bisection = <number>\n\n");
+93   printf("  -> Number of successful runs for optimal population sizing:\n      num_runs=<number>\n\n");
+94   printf("  -> Quiet mode (prints only the end-of-the-run summary):\n      quiet_mode = <number>\n\n");
+95   printf("  -> Verbose mode (do not use with redirected output):\n      verbose_mode = <number>\n\n");
+96   printf("  -> Random seed:\n      random_seed = <number>\n\n");
+97   printf("See example_input, example_input_bisection, and example_input_big for example input files\n");
+98 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{parse-input_8cpp_ecc496a88afbe998e2577dfe766dbd0e}{
+\index{parse-input.cpp@{parse-input.cpp}!parse_input_file@{parse\_\-input\_\-file}}
+\index{parse_input_file@{parse\_\-input\_\-file}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[parse\_\-input\_\-file]{\setlength{\rightskip}{0pt plus 5cm}void parse\_\-input\_\-file (FILE $\ast$ {\em f}, \hyperlink{struct_parameters}{Parameters} $\ast$ {\em params})}}
+\label{parse-input_8cpp_ecc496a88afbe998e2577dfe766dbd0e}
+
+
+Parse the input file and store the results in a structure \hyperlink{struct_parameters}{Parameters}. 
+
+\begin{Desc}
+\item[See also:]Example input parameter file: \hyperlink{example__input-example}{example\_\-input} \end{Desc}
+
+
+Definition at line 23 of file parse-input.cpp.
+
+References Parameters::bisection, get\_\-int\_\-value(), get\_\-new\_\-identifier(), Parameters::max\_\-generations, MAX\_\-LINE\_\-WIDTH, Parameters::num\_\-bisection\_\-runs, Parameters::population\_\-size, Parameters::problem\_\-size, Parameters::quiet\_\-mode, Parameters::replacement, set\-Seed(), Parameters::tournament\_\-size, and Parameters::verbose\_\-mode.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}24 {
+25   if (f==NULL)
+26     return;
+27 
+28   char id[MAX_LINE_WIDTH];
+29 
+30   int seed_set=0;
+31   while (get_new_identifier(f,id))
+32     {
+33       if (strcmp(id,"population_size")==0)
+34         get_int_value(f,params->population_size);
+35       else
+36       if (strcmp(id,"max_generations")==0)
+37         get_int_value(f,params->max_generations);
+38       else
+39       if (strcmp(id,"problem_size")==0)
+40         get_int_value(f,params->problem_size);
+41       else
+42       if (strcmp(id,"replacement")==0)
+43         get_int_value(f,params->replacement);
+44       else
+45       if (strcmp(id,"tournament_size")==0)
+46         get_int_value(f,params->tournament_size);
+47       else
+48       if (strcmp(id,"bisection")==0)
+49         get_int_value(f,params->bisection);
+50       else
+51       if (strcmp(id,"num_bisection_runs")==0)
+52         get_int_value(f,params->num_bisection_runs);
+53       else
+54       if (strcmp(id,"quiet_mode")==0)
+55         get_int_value(f,params->quiet_mode);
+56       else
+57       if (strcmp(id,"verbose_mode")==0)
+58         get_int_value(f,params->verbose_mode);
+59       else
+60       if (strcmp(id,"random_seed")==0)
+61         {
+62           int seed;
+63           get_int_value(f,seed);
+64           setSeed(seed);
+65           seed_set=1;
+66         }
+67       else
+68         {
+69           printf("%s is an unknown identifier\n",id);
+70           exit(-1);
+71         };
+72     };
+73   
+74   if (seed_set==0)
+75     setSeed(123);
+76 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{parse-input_8cpp_9d6eb3d840afb4c96f4d0e52e61c3bf7}{
+\index{parse-input.cpp@{parse-input.cpp}!print_parameters@{print\_\-parameters}}
+\index{print_parameters@{print\_\-parameters}!parse-input.cpp@{parse-input.cpp}}
+\subsubsection[print\_\-parameters]{\setlength{\rightskip}{0pt plus 5cm}int print\_\-parameters (\hyperlink{struct_parameters}{Parameters} $\ast$ {\em params})}}
+\label{parse-input_8cpp_9d6eb3d840afb4c96f4d0e52e61c3bf7}
+
+
+Print the parameters to stdout. 
+
+
+
+Definition at line 180 of file parse-input.cpp.
+
+References Parameters::bisection, Parameters::max\_\-generations, Parameters::num\_\-bisection\_\-runs, Parameters::population\_\-size, Parameters::problem\_\-size, Parameters::quiet\_\-mode, Parameters::replacement, separator(), Parameters::tournament\_\-size, and Parameters::verbose\_\-mode.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}181 {
+182   printf("Parameters:\n");
+183   printf("  population_size    = %u\n",params->population_size);
+184   printf("  problem_size       = %u\n",params->problem_size);
+185   printf("  max_generations    = %u\n",params->max_generations);
+186   printf("  tournament_size    = %u\n",params->tournament_size);
+187   printf("  replacement        = %u\n",params->replacement);
+188   printf("  bisection          = %u\n",params->bisection);
+189   printf("  num_bisection_runs = %u\n",params->num_bisection_runs);
+190   printf("  quiet_mode         = %u\n",params->quiet_mode);
+191   printf("  verbose_mode       = %u\n",params->verbose_mode);
+192   separator(stdout);
+193 
+194   return 0;
+195 }
+\end{verbatim}\end{Code}
+
+

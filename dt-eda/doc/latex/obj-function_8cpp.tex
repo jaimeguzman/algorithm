@@ -1,0 +1,147 @@
+\hypertarget{obj-function_8cpp}{
+\section{obj-function.cpp File Reference}
+\label{obj-function_8cpp}\index{obj-function.cpp@{obj-function.cpp}}
+}
+User-defined functions that define the problem. 
+
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+double \hyperlink{obj-function_8cpp_633957adde57ee545797def8e74eb8e4}{objective\_\-function} (int $\ast$x, int n)
+\begin{CompactList}\small\item\em The example included by default is a simple onemax problem, which is defined as the sum of all characters in a string (usually binary but it can really be used with any alphabet represented by integers like here). \item\end{CompactList}\item 
+void \hyperlink{obj-function_8cpp_1f6693b983930dbfe403246098bbd9ef}{set\_\-num\_\-vals} (int $\ast$num\_\-vals, int n)
+\begin{CompactList}\small\item\em Each string position i has values from 0 to num\_\-values\mbox{[}i\mbox{]}-1. \item\end{CompactList}\item 
+int \hyperlink{obj-function_8cpp_39144c50109e3a793e1aecd4014ece28}{is\_\-optimal} (int $\ast$x, int n, int $\ast$num\_\-vals)
+\begin{CompactList}\small\item\em Verify whether the given solution is the global optimum. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+User-defined functions that define the problem. 
+
+\begin{Desc}
+\item[See also:]Example input parameter files: \hyperlink{example__input-example}{example\_\-input}, \hyperlink{example__input__bisection-example}{example\_\-input\_\-bisection}, \hyperlink{example__input__big-example}{example\_\-input\_\-big} 
+
+Example objective function (concatenated trap of order 5): \hyperlink{example-trap5_8cpp-example}{example-trap5.cpp} 
+
+Example function for setting the number of characters in each string position: \hyperlink{example-num-values_8cpp-example}{example-num-values.cpp} \end{Desc}
+
+
+Definition in file \hyperlink{obj-function_8cpp-source}{obj-function.cpp}.
+
+\subsection{Function Documentation}
+\hypertarget{obj-function_8cpp_39144c50109e3a793e1aecd4014ece28}{
+\index{obj-function.cpp@{obj-function.cpp}!is_optimal@{is\_\-optimal}}
+\index{is_optimal@{is\_\-optimal}!obj-function.cpp@{obj-function.cpp}}
+\subsubsection[is\_\-optimal]{\setlength{\rightskip}{0pt plus 5cm}int is\_\-optimal (int $\ast$ {\em x}, int {\em n}, int $\ast$ {\em num\_\-vals})}}
+\label{obj-function_8cpp_39144c50109e3a793e1aecd4014ece28}
+
+
+Verify whether the given solution is the global optimum. 
+
+If there is no such function, just return 0 by default. The default function works for the default objective function, that is, onemax.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]input string (candidate solution) \item[{\em n}]string length \item[{\em num\_\-vals}]array of the numbers of values for all string positions\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]0 if the solution is non-optimal, something else if the solution is optimal \end{Desc}
+
+
+Definition at line 117 of file obj-function.cpp.
+
+\begin{Code}\begin{verbatim}118 {
+119   int ok=1;
+120 
+121   for (int i=0; (i<n)&&(ok); i++)
+122     if (x[i]!=num_vals[i]-1)
+123       ok=0;
+124 
+125   return ok;
+126 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{obj-function_8cpp_633957adde57ee545797def8e74eb8e4}{
+\index{obj-function.cpp@{obj-function.cpp}!objective_function@{objective\_\-function}}
+\index{objective_function@{objective\_\-function}!obj-function.cpp@{obj-function.cpp}}
+\subsubsection[objective\_\-function]{\setlength{\rightskip}{0pt plus 5cm}double objective\_\-function (int $\ast$ {\em x}, int {\em n})}}
+\label{obj-function_8cpp_633957adde57ee545797def8e74eb8e4}
+
+
+The example included by default is a simple onemax problem, which is defined as the sum of all characters in a string (usually binary but it can really be used with any alphabet represented by integers like here). 
+
+The objective function is coupled with the function that specifies the number of values of all string positions, \hyperlink{obj-function_8hpp_1f6693b983930dbfe403246098bbd9ef}{set\_\-num\_\-vals(int $\ast$, int)}. Both these functions can be found in \hyperlink{obj-function_8cpp}{obj-function.cpp}.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]input string (candidate solution) \item[{\em n}]string length\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]Value of the objective function for the given candidate solution. \end{Desc}
+\begin{Desc}
+\item[Examples: ]\par
+\hyperlink{example-trap5_8cpp-example}{example-trap5.cpp}.\end{Desc}
+
+
+Definition at line 36 of file obj-function.cpp.
+
+Referenced by evaluate\_\-population(), and print\_\-population().
+
+\begin{Code}\begin{verbatim}37 {
+38   int val=0;
+39 
+40   // compute the sum of all values in the given string
+41   // (works also for non-binary representations)
+42 
+43   for (int i=0; i<n; i++)
+44     val+=x[i];
+45 
+46   // return the final value
+47   
+48   return val;
+49 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{obj-function_8cpp_1f6693b983930dbfe403246098bbd9ef}{
+\index{obj-function.cpp@{obj-function.cpp}!set_num_vals@{set\_\-num\_\-vals}}
+\index{set_num_vals@{set\_\-num\_\-vals}!obj-function.cpp@{obj-function.cpp}}
+\subsubsection[set\_\-num\_\-vals]{\setlength{\rightskip}{0pt plus 5cm}void set\_\-num\_\-vals (int $\ast$ {\em num\_\-vals}, int {\em n})}}
+\label{obj-function_8cpp_1f6693b983930dbfe403246098bbd9ef}
+
+
+Each string position i has values from 0 to num\_\-values\mbox{[}i\mbox{]}-1. 
+
+By default, the code makes all string positions ternary (values 0 to 2) but alternative assignments can be used.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em num\_\-vals}]array to store the numbers of values for all string positions \item[{\em n}]string length\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]No return value. \end{Desc}
+\begin{Desc}
+\item[Examples: ]\par
+\hyperlink{example-num-values_8cpp-example}{example-num-values.cpp}.\end{Desc}
+
+
+Definition at line 80 of file obj-function.cpp.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}81 {
+82   // set the number of values for each string position (variable),
+83   // use 2 for binary, 3 or higher for higher candinality alphabets
+84 
+85   for (int i=0; i<n; i++)
+86     num_vals[i]=3;
+87 }
+\end{verbatim}\end{Code}
+
+

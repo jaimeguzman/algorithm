@@ -1,0 +1,207 @@
+\hypertarget{bisection_8cpp}{
+\section{bisection.cpp File Reference}
+\label{bisection_8cpp}\index{bisection.cpp@{bisection.cpp}}
+}
+Bisection method that computes near optimal population size. 
+
+{\tt \#include \char`\"{}bisection.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}eda.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}stats.hpp\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{bisection_8cpp_d0ddd2396f584f233c8946e2fd5a6e79}{bisection} (\hyperlink{struct_parameters}{Parameters} $\ast$params, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$avg\_\-stats)
+\begin{CompactList}\small\item\em Bisection method for determining optimal population size. \item\end{CompactList}\item 
+int \hyperlink{bisection_8cpp_5880c8cc9cb725058ba90e00f04bf5cc}{do\_\-runs} (\hyperlink{struct_parameters}{Parameters} $\ast$params, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$avg\_\-stats, int quiet)
+\begin{CompactList}\small\item\em Run a number of successful runs, terminate on a failure. \item\end{CompactList}\item 
+void \hyperlink{bisection_8cpp_66b0ce2c5fe3b131a38a1459e75d41d6}{print\_\-bisection\_\-summary} (FILE $\ast$f, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Print summary of a set of runs (represented by average statistics). \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Bisection method that computes near optimal population size. 
+
+
+
+Definition in file \hyperlink{bisection_8cpp-source}{bisection.cpp}.
+
+\subsection{Function Documentation}
+\hypertarget{bisection_8cpp_d0ddd2396f584f233c8946e2fd5a6e79}{
+\index{bisection.cpp@{bisection.cpp}!bisection@{bisection}}
+\index{bisection@{bisection}!bisection.cpp@{bisection.cpp}}
+\subsubsection[bisection]{\setlength{\rightskip}{0pt plus 5cm}void bisection (\hyperlink{struct_parameters}{Parameters} $\ast$ {\em params}, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$ {\em avg\_\-stats})}}
+\label{bisection_8cpp_d0ddd2396f584f233c8946e2fd5a6e79}
+
+
+Bisection method for determining optimal population size. 
+
+\begin{Desc}
+\item[Examples: ]\par
+\hyperlink{example__input-example}{example\_\-input}, \hyperlink{example__input__big-example}{example\_\-input\_\-big}, and \hyperlink{example__input__bisection-example}{example\_\-input\_\-bisection}.\end{Desc}
+
+
+Definition at line 15 of file bisection.cpp.
+
+References do\_\-runs(), Parameters::population\_\-size, Average\-Population\-Statistics::population\_\-size, Parameters::quiet\_\-mode, separator(), and Parameters::verbose\_\-mode.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}16 {
+17   AveragePopulationStatistics current_avg_stats;
+18   Parameters *current_params = new Parameters;
+19   int result;
+20   int quiet=params->quiet_mode;
+21 
+22   params->quiet_mode=1;
+23   params->verbose_mode=0;
+24 
+25   // make the first set of runs
+26 
+27   *current_params = *params;
+28   result=do_runs(current_params,&current_avg_stats,quiet);
+29   
+30   int minN=0;
+31   int maxN=0;
+32 
+33   if (result)
+34     {
+35       // if successful, try to halve population size until failure
+36 
+37       *avg_stats=current_avg_stats;
+38 
+39       while (result)
+40         {
+41           current_params->population_size/=2;
+42           result=do_runs(current_params,&current_avg_stats,quiet);
+43 
+44           if (result)
+45             *avg_stats=current_avg_stats;
+46         };
+47       
+48       // set initial population size bounds
+49 
+50       minN=current_params->population_size;
+51       maxN=minN*2;
+52     }
+53   else
+54     {
+55       // if failure, double population size until success
+56 
+57       while (!result)
+58         {
+59           current_params->population_size*=2;
+60           result=do_runs(current_params,&current_avg_stats,quiet);
+61 
+62           if (result)
+63             *avg_stats=current_avg_stats;
+64         };
+65       
+66       // set initial population size bounds
+67 
+68       maxN=current_params->population_size;
+69       minN=maxN/2;
+70     }
+71 
+72   // perform bisection until interval width is at most 5% of the
+73   // lower bound
+74 
+75   while ((((double)maxN-minN)/minN)>0.05)
+76     {
+77       // try to make a set of runs in the middle of the interval
+78 
+79       current_params->population_size=(minN+maxN)/2;
+80       result=do_runs(current_params,&current_avg_stats,quiet);
+81 
+82       if (result)
+83         *avg_stats=current_avg_stats;
+84 
+85       // success goes halves the interval downwards, failure upwards
+86 
+87       if (result)
+88         maxN=current_params->population_size;
+89       else
+90         minN=current_params->population_size;
+91     }
+92 
+93   if (quiet==0)
+94     {
+95       printf("Finished bisection with N=%u\n",avg_stats->population_size);
+96       separator(stdout);
+97     };
+98 
+99   delete current_params;
+100 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{bisection_8cpp_5880c8cc9cb725058ba90e00f04bf5cc}{
+\index{bisection.cpp@{bisection.cpp}!do_runs@{do\_\-runs}}
+\index{do_runs@{do\_\-runs}!bisection.cpp@{bisection.cpp}}
+\subsubsection[do\_\-runs]{\setlength{\rightskip}{0pt plus 5cm}int do\_\-runs (\hyperlink{struct_parameters}{Parameters} $\ast$ {\em params}, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$ {\em avg\_\-stats}, int {\em quiet})}}
+\label{bisection_8cpp_5880c8cc9cb725058ba90e00f04bf5cc}
+
+
+Run a number of successful runs, terminate on a failure. 
+
+
+
+Definition at line 107 of file bisection.cpp.
+
+References average\_\-population\_\-statistics(), Parameters::num\_\-bisection\_\-runs, one\_\-run(), and Parameters::population\_\-size.
+
+Referenced by bisection().
+
+\begin{Code}\begin{verbatim}108 {
+109   PopulationStatistics *stats = new PopulationStatistics[params->num_bisection_runs];
+110   int run;
+111   int failed=0;
+112   
+113   for (run=0; (run<params->num_bisection_runs)&&(!failed); run++)
+114     {
+115       int result=one_run(params,&stats[run]);
+116       failed=!result;
+117     };
+118   
+119   if (quiet==0)
+120     printf("bisection -> %2u / %2u successes with N=%u\n",
+121            run,params->num_bisection_runs,params->population_size);
+122   
+123   average_population_statistics(avg_stats,stats,params->num_bisection_runs);
+124 
+125   delete[] stats;
+126 
+127   if (failed)
+128     return 0;
+129   else
+130     return 1;
+131 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{bisection_8cpp_66b0ce2c5fe3b131a38a1459e75d41d6}{
+\index{bisection.cpp@{bisection.cpp}!print_bisection_summary@{print\_\-bisection\_\-summary}}
+\index{print_bisection_summary@{print\_\-bisection\_\-summary}!bisection.cpp@{bisection.cpp}}
+\subsubsection[print\_\-bisection\_\-summary]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-bisection\_\-summary (FILE $\ast$ {\em f}, \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$ {\em stats})}}
+\label{bisection_8cpp_66b0ce2c5fe3b131a38a1459e75d41d6}
+
+
+Print summary of a set of runs (represented by average statistics). 
+
+
+
+Definition at line 138 of file bisection.cpp.
+
+References Average\-Population\-Statistics::avg\_\-max\-F, Average\-Population\-Statistics::avg\_\-num\_\-evals, Average\-Population\-Statistics::num\_\-runs, and Average\-Population\-Statistics::population\_\-size.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}139 {
+140   fprintf(f,"Bisection summary output:\n");
+141   fprintf(f,"   num_runs        = %u\n",stats->num_runs);
+142   fprintf(f,"   avg_best_found  = %f\n",stats->avg_maxF);
+143   fprintf(f,"   avg_num_evals   = %f\n",stats->avg_num_evals);
+144   fprintf(f,"   pop_size        = %u\n",stats->population_size);
+145 }
+\end{verbatim}\end{Code}
+
+

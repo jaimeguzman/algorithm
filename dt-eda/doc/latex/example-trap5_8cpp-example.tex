@@ -1,0 +1,45 @@
+\hypertarget{example-trap5_8cpp-example}{
+\section{example-trap5.cpp}
+}
+An additional example of the objective function. Here a concatenated trap of order 5 is used, which is fully deceptive. This function can be used for binary strings where the number of bits is an integer multiple of 5. This function should not be used for non-binary representations.
+
+
+
+\begin{DocInclude}\begin{verbatim}1 double objective_function(int *x, int n)
+2 {
+3   int val=0;
+4 
+5   // verify the string length constraint
+6 
+7   if (n%5!=0)
+8     {
+9       printf("Trap function requires string length divisible by 5.\n");
+10       exit(-55);
+11     }
+12         
+13   // add up all the traps
+14 
+15   for (int i=0; i<n;)
+16     {
+17       int sum=0;
+18 
+19       // compute the sum of bits in the next 5 bits
+20 
+21       for (int k=0; k<5; k++)
+22         sum+=x[i++];
+23       
+24       // compute the trap-5 value for the computed sum
+25 
+26       if (sum==5)
+27         val+=5;
+28       else
+29         val+=4-sum;
+30     }
+31 
+32   // return the result
+33   
+34   return val;
+35 }
+\end{verbatim}
+\end{DocInclude}
+ 

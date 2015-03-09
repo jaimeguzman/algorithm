@@ -1,0 +1,253 @@
+\contentsline {chapter}{\numberline {1}Dependency-Tree Estimation of Distribution Algorithm Main Page}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}License Information}{1}{section.1.1}
+\contentsline {chapter}{\numberline {2}Dependency-Tree Estimation of Distribution Algorithm Data Structure Index}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Dependency-Tree Estimation of Distribution Algorithm Data Structures}{3}{section.2.1}
+\contentsline {chapter}{\numberline {3}Dependency-Tree Estimation of Distribution Algorithm File Index}{5}{chapter.3}
+\contentsline {section}{\numberline {3.1}Dependency-Tree Estimation of Distribution Algorithm File List}{5}{section.3.1}
+\contentsline {chapter}{\numberline {4}Dependency-Tree Estimation of Distribution Algorithm Data Structure Documentation}{7}{chapter.4}
+\contentsline {section}{\numberline {4.1}Average\discretionary {-}{}{}Population\discretionary {-}{}{}Statistics Struct Reference}{7}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}
+\contentsline {subsubsection}{\numberline {4.1.2.1}avg\_\discretionary {-}{}{}avgF}{7}{subsubsection.4.1.2.1}
+\contentsline {subsubsection}{\numberline {4.1.2.2}avg\_\discretionary {-}{}{}maxF}{8}{subsubsection.4.1.2.2}
+\contentsline {subsubsection}{\numberline {4.1.2.3}avg\_\discretionary {-}{}{}minF}{8}{subsubsection.4.1.2.3}
+\contentsline {subsubsection}{\numberline {4.1.2.4}avg\_\discretionary {-}{}{}num\_\discretionary {-}{}{}evals}{8}{subsubsection.4.1.2.4}
+\contentsline {subsubsection}{\numberline {4.1.2.5}max\_\discretionary {-}{}{}maxF}{8}{subsubsection.4.1.2.5}
+\contentsline {subsubsection}{\numberline {4.1.2.6}min\_\discretionary {-}{}{}minF}{8}{subsubsection.4.1.2.6}
+\contentsline {subsubsection}{\numberline {4.1.2.7}num\_\discretionary {-}{}{}runs}{8}{subsubsection.4.1.2.7}
+\contentsline {subsubsection}{\numberline {4.1.2.8}p\_\discretionary {-}{}{}success}{8}{subsubsection.4.1.2.8}
+\contentsline {subsubsection}{\numberline {4.1.2.9}population\_\discretionary {-}{}{}size}{8}{subsubsection.4.1.2.9}
+\contentsline {subsubsection}{\numberline {4.1.2.10}problem\_\discretionary {-}{}{}size}{8}{subsubsection.4.1.2.10}
+\contentsline {section}{\numberline {4.2}Parameters Struct Reference}{10}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{10}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{10}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}bisection}{10}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}max\_\discretionary {-}{}{}generations}{11}{subsubsection.4.2.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.3}num\_\discretionary {-}{}{}bisection\_\discretionary {-}{}{}runs}{11}{subsubsection.4.2.2.3}
+\contentsline {subsubsection}{\numberline {4.2.2.4}population\_\discretionary {-}{}{}size}{11}{subsubsection.4.2.2.4}
+\contentsline {subsubsection}{\numberline {4.2.2.5}problem\_\discretionary {-}{}{}size}{11}{subsubsection.4.2.2.5}
+\contentsline {subsubsection}{\numberline {4.2.2.6}quiet\_\discretionary {-}{}{}mode}{11}{subsubsection.4.2.2.6}
+\contentsline {subsubsection}{\numberline {4.2.2.7}replacement}{11}{subsubsection.4.2.2.7}
+\contentsline {subsubsection}{\numberline {4.2.2.8}tournament\_\discretionary {-}{}{}size}{11}{subsubsection.4.2.2.8}
+\contentsline {subsubsection}{\numberline {4.2.2.9}verbose\_\discretionary {-}{}{}mode}{12}{subsubsection.4.2.2.9}
+\contentsline {section}{\numberline {4.3}Population\discretionary {-}{}{}Statistics Struct Reference}{13}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{13}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Field Documentation}{13}{subsection.4.3.2}
+\contentsline {subsubsection}{\numberline {4.3.2.1}avgF}{13}{subsubsection.4.3.2.1}
+\contentsline {subsubsection}{\numberline {4.3.2.2}idx\_\discretionary {-}{}{}maxF}{13}{subsubsection.4.3.2.2}
+\contentsline {subsubsection}{\numberline {4.3.2.3}idx\_\discretionary {-}{}{}minF}{13}{subsubsection.4.3.2.3}
+\contentsline {subsubsection}{\numberline {4.3.2.4}maxF}{13}{subsubsection.4.3.2.4}
+\contentsline {subsubsection}{\numberline {4.3.2.5}minF}{14}{subsubsection.4.3.2.5}
+\contentsline {subsubsection}{\numberline {4.3.2.6}num\_\discretionary {-}{}{}evals}{14}{subsubsection.4.3.2.6}
+\contentsline {subsubsection}{\numberline {4.3.2.7}population\_\discretionary {-}{}{}size}{14}{subsubsection.4.3.2.7}
+\contentsline {subsubsection}{\numberline {4.3.2.8}problem\_\discretionary {-}{}{}size}{14}{subsubsection.4.3.2.8}
+\contentsline {subsubsection}{\numberline {4.3.2.9}success}{14}{subsubsection.4.3.2.9}
+\contentsline {section}{\numberline {4.4}Status Class Reference}{15}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{15}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{15}{subsection.4.4.2}
+\contentsline {subsubsection}{\numberline {4.4.2.1}Status}{15}{subsubsection.4.4.2.1}
+\contentsline {subsubsection}{\numberline {4.4.2.2}$\sim $Status}{15}{subsubsection.4.4.2.2}
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{15}{subsection.4.4.3}
+\contentsline {subsubsection}{\numberline {4.4.3.1}reset}{15}{subsubsection.4.4.3.1}
+\contentsline {subsubsection}{\numberline {4.4.3.2}update}{16}{subsubsection.4.4.3.2}
+\contentsline {section}{\numberline {4.5}Tree\discretionary {-}{}{}Model Class Reference}{17}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{17}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Constructor \& Destructor Documentation}{17}{subsection.4.5.2}
+\contentsline {subsubsection}{\numberline {4.5.2.1}TreeModel}{17}{subsubsection.4.5.2.1}
+\contentsline {subsubsection}{\numberline {4.5.2.2}TreeModel}{18}{subsubsection.4.5.2.2}
+\contentsline {subsubsection}{\numberline {4.5.2.3}$\sim $TreeModel}{18}{subsubsection.4.5.2.3}
+\contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{19}{subsection.4.5.3}
+\contentsline {subsubsection}{\numberline {4.5.3.1}learnProbabilities}{19}{subsubsection.4.5.3.1}
+\contentsline {subsubsection}{\numberline {4.5.3.2}learnStructure}{20}{subsubsection.4.5.3.2}
+\contentsline {subsubsection}{\numberline {4.5.3.3}printModel}{23}{subsubsection.4.5.3.3}
+\contentsline {subsubsection}{\numberline {4.5.3.4}sampleModel}{24}{subsubsection.4.5.3.4}
+\contentsline {chapter}{\numberline {5}Dependency-Tree Estimation of Distribution Algorithm File Documentation}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1}bisection.cpp File Reference}{25}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{25}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{26}{subsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.2.1}bisection}{26}{subsubsection.5.1.2.1}
+\contentsline {subsubsection}{\numberline {5.1.2.2}do\_\discretionary {-}{}{}runs}{27}{subsubsection.5.1.2.2}
+\contentsline {subsubsection}{\numberline {5.1.2.3}print\_\discretionary {-}{}{}bisection\_\discretionary {-}{}{}summary}{28}{subsubsection.5.1.2.3}
+\contentsline {section}{\numberline {5.2}bisection.hpp File Reference}{29}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{29}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Function Documentation}{29}{subsection.5.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.1}bisection}{29}{subsubsection.5.2.2.1}
+\contentsline {subsubsection}{\numberline {5.2.2.2}do\_\discretionary {-}{}{}runs}{31}{subsubsection.5.2.2.2}
+\contentsline {subsubsection}{\numberline {5.2.2.3}print\_\discretionary {-}{}{}bisection\_\discretionary {-}{}{}summary}{31}{subsubsection.5.2.2.3}
+\contentsline {section}{\numberline {5.3}eda.cpp File Reference}{32}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{33}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Typedef Documentation}{33}{subsection.5.3.2}
+\contentsline {subsubsection}{\numberline {5.3.2.1}ReplacementMethod}{33}{subsubsection.5.3.2.1}
+\contentsline {subsection}{\numberline {5.3.3}Function Documentation}{33}{subsection.5.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.1}allocate\_\discretionary {-}{}{}population}{33}{subsubsection.5.3.3.1}
+\contentsline {subsubsection}{\numberline {5.3.3.2}evaluate\_\discretionary {-}{}{}population}{34}{subsubsection.5.3.3.2}
+\contentsline {subsubsection}{\numberline {5.3.3.3}free\_\discretionary {-}{}{}population}{34}{subsubsection.5.3.3.3}
+\contentsline {subsubsection}{\numberline {5.3.3.4}full\_\discretionary {-}{}{}replacement}{34}{subsubsection.5.3.3.4}
+\contentsline {subsubsection}{\numberline {5.3.3.5}generate\_\discretionary {-}{}{}BB\_\discretionary {-}{}{}population}{35}{subsubsection.5.3.3.5}
+\contentsline {subsubsection}{\numberline {5.3.3.6}generate\_\discretionary {-}{}{}population}{35}{subsubsection.5.3.3.6}
+\contentsline {subsubsection}{\numberline {5.3.3.7}individual\_\discretionary {-}{}{}distance}{36}{subsubsection.5.3.3.7}
+\contentsline {subsubsection}{\numberline {5.3.3.8}one\_\discretionary {-}{}{}run}{36}{subsubsection.5.3.3.8}
+\contentsline {subsubsection}{\numberline {5.3.3.9}print\_\discretionary {-}{}{}population}{38}{subsubsection.5.3.3.9}
+\contentsline {subsubsection}{\numberline {5.3.3.10}print\_\discretionary {-}{}{}status}{39}{subsubsection.5.3.3.10}
+\contentsline {subsubsection}{\numberline {5.3.3.11}print\_\discretionary {-}{}{}summary}{39}{subsubsection.5.3.3.11}
+\contentsline {subsubsection}{\numberline {5.3.3.12}restricted\_\discretionary {-}{}{}tournament\_\discretionary {-}{}{}replacement}{39}{subsubsection.5.3.3.12}
+\contentsline {subsubsection}{\numberline {5.3.3.13}separator}{40}{subsubsection.5.3.3.13}
+\contentsline {subsubsection}{\numberline {5.3.3.14}tournament\_\discretionary {-}{}{}selection}{40}{subsubsection.5.3.3.14}
+\contentsline {subsubsection}{\numberline {5.3.3.15}variation}{41}{subsubsection.5.3.3.15}
+\contentsline {section}{\numberline {5.4}eda.hpp File Reference}{43}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{44}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Function Documentation}{44}{subsection.5.4.2}
+\contentsline {subsubsection}{\numberline {5.4.2.1}allocate\_\discretionary {-}{}{}population}{44}{subsubsection.5.4.2.1}
+\contentsline {subsubsection}{\numberline {5.4.2.2}evaluate\_\discretionary {-}{}{}population}{44}{subsubsection.5.4.2.2}
+\contentsline {subsubsection}{\numberline {5.4.2.3}free\_\discretionary {-}{}{}population}{44}{subsubsection.5.4.2.3}
+\contentsline {subsubsection}{\numberline {5.4.2.4}full\_\discretionary {-}{}{}replacement}{45}{subsubsection.5.4.2.4}
+\contentsline {subsubsection}{\numberline {5.4.2.5}generate\_\discretionary {-}{}{}BB\_\discretionary {-}{}{}population}{45}{subsubsection.5.4.2.5}
+\contentsline {subsubsection}{\numberline {5.4.2.6}generate\_\discretionary {-}{}{}population}{46}{subsubsection.5.4.2.6}
+\contentsline {subsubsection}{\numberline {5.4.2.7}individual\_\discretionary {-}{}{}distance}{46}{subsubsection.5.4.2.7}
+\contentsline {subsubsection}{\numberline {5.4.2.8}one\_\discretionary {-}{}{}run}{46}{subsubsection.5.4.2.8}
+\contentsline {subsubsection}{\numberline {5.4.2.9}print\_\discretionary {-}{}{}population}{48}{subsubsection.5.4.2.9}
+\contentsline {subsubsection}{\numberline {5.4.2.10}print\_\discretionary {-}{}{}status}{48}{subsubsection.5.4.2.10}
+\contentsline {subsubsection}{\numberline {5.4.2.11}print\_\discretionary {-}{}{}summary}{49}{subsubsection.5.4.2.11}
+\contentsline {subsubsection}{\numberline {5.4.2.12}restricted\_\discretionary {-}{}{}tournament\_\discretionary {-}{}{}replacement}{49}{subsubsection.5.4.2.12}
+\contentsline {subsubsection}{\numberline {5.4.2.13}separator}{50}{subsubsection.5.4.2.13}
+\contentsline {subsubsection}{\numberline {5.4.2.14}tournament\_\discretionary {-}{}{}selection}{50}{subsubsection.5.4.2.14}
+\contentsline {subsubsection}{\numberline {5.4.2.15}variation}{51}{subsubsection.5.4.2.15}
+\contentsline {section}{\numberline {5.5}heap.cpp File Reference}{52}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{52}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Define Documentation}{52}{subsection.5.5.2}
+\contentsline {subsubsection}{\numberline {5.5.2.1}left\_\discretionary {-}{}{}child\_\discretionary {-}{}{}index}{52}{subsubsection.5.5.2.1}
+\contentsline {subsubsection}{\numberline {5.5.2.2}parent\_\discretionary {-}{}{}index}{53}{subsubsection.5.5.2.2}
+\contentsline {subsection}{\numberline {5.5.3}Function Documentation}{53}{subsection.5.5.3}
+\contentsline {subsubsection}{\numberline {5.5.3.1}build\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{53}{subsubsection.5.5.3.1}
+\contentsline {subsubsection}{\numberline {5.5.3.2}check\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{53}{subsubsection.5.5.3.2}
+\contentsline {subsubsection}{\numberline {5.5.3.3}float\_\discretionary {-}{}{}up\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{54}{subsubsection.5.5.3.3}
+\contentsline {subsubsection}{\numberline {5.5.3.4}increase\_\discretionary {-}{}{}key\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{54}{subsubsection.5.5.3.4}
+\contentsline {subsubsection}{\numberline {5.5.3.5}max\_\discretionary {-}{}{}heapify}{54}{subsubsection.5.5.3.5}
+\contentsline {subsubsection}{\numberline {5.5.3.6}pop\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{55}{subsubsection.5.5.3.6}
+\contentsline {subsubsection}{\numberline {5.5.3.7}print\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{55}{subsubsection.5.5.3.7}
+\contentsline {section}{\numberline {5.6}heap.hpp File Reference}{57}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{57}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Define Documentation}{57}{subsection.5.6.2}
+\contentsline {subsubsection}{\numberline {5.6.2.1}HEAP\_\discretionary {-}{}{}MINUS\_\discretionary {-}{}{}INFINITY}{57}{subsubsection.5.6.2.1}
+\contentsline {subsection}{\numberline {5.6.3}Function Documentation}{58}{subsection.5.6.3}
+\contentsline {subsubsection}{\numberline {5.6.3.1}build\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{58}{subsubsection.5.6.3.1}
+\contentsline {subsubsection}{\numberline {5.6.3.2}check\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{58}{subsubsection.5.6.3.2}
+\contentsline {subsubsection}{\numberline {5.6.3.3}float\_\discretionary {-}{}{}up\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{58}{subsubsection.5.6.3.3}
+\contentsline {subsubsection}{\numberline {5.6.3.4}increase\_\discretionary {-}{}{}key\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{59}{subsubsection.5.6.3.4}
+\contentsline {subsubsection}{\numberline {5.6.3.5}max\_\discretionary {-}{}{}heapify}{59}{subsubsection.5.6.3.5}
+\contentsline {subsubsection}{\numberline {5.6.3.6}pop\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{60}{subsubsection.5.6.3.6}
+\contentsline {subsubsection}{\numberline {5.6.3.7}print\_\discretionary {-}{}{}max\_\discretionary {-}{}{}heap}{60}{subsubsection.5.6.3.7}
+\contentsline {section}{\numberline {5.7}main.cpp File Reference}{62}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{62}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{62}{subsection.5.7.2}
+\contentsline {subsubsection}{\numberline {5.7.2.1}main}{62}{subsubsection.5.7.2.1}
+\contentsline {section}{\numberline {5.8}MT.cpp File Reference}{65}{section.5.8}
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{65}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.2}Define Documentation}{65}{subsection.5.8.2}
+\contentsline {subsubsection}{\numberline {5.8.2.1}LOWER\_\discretionary {-}{}{}MASK}{65}{subsubsection.5.8.2.1}
+\contentsline {subsubsection}{\numberline {5.8.2.2}M}{65}{subsubsection.5.8.2.2}
+\contentsline {subsubsection}{\numberline {5.8.2.3}MATRIX\_\discretionary {-}{}{}A}{65}{subsubsection.5.8.2.3}
+\contentsline {subsubsection}{\numberline {5.8.2.4}N}{66}{subsubsection.5.8.2.4}
+\contentsline {subsubsection}{\numberline {5.8.2.5}UPPER\_\discretionary {-}{}{}MASK}{66}{subsubsection.5.8.2.5}
+\contentsline {subsection}{\numberline {5.8.3}Function Documentation}{66}{subsection.5.8.3}
+\contentsline {subsubsection}{\numberline {5.8.3.1}genrand\_\discretionary {-}{}{}int31}{66}{subsubsection.5.8.3.1}
+\contentsline {subsubsection}{\numberline {5.8.3.2}genrand\_\discretionary {-}{}{}int32}{66}{subsubsection.5.8.3.2}
+\contentsline {subsubsection}{\numberline {5.8.3.3}genrand\_\discretionary {-}{}{}real1}{67}{subsubsection.5.8.3.3}
+\contentsline {subsubsection}{\numberline {5.8.3.4}genrand\_\discretionary {-}{}{}real2}{67}{subsubsection.5.8.3.4}
+\contentsline {subsubsection}{\numberline {5.8.3.5}genrand\_\discretionary {-}{}{}real3}{67}{subsubsection.5.8.3.5}
+\contentsline {subsubsection}{\numberline {5.8.3.6}genrand\_\discretionary {-}{}{}res53}{67}{subsubsection.5.8.3.6}
+\contentsline {subsubsection}{\numberline {5.8.3.7}init\_\discretionary {-}{}{}by\_\discretionary {-}{}{}array}{68}{subsubsection.5.8.3.7}
+\contentsline {subsubsection}{\numberline {5.8.3.8}init\_\discretionary {-}{}{}genrand}{68}{subsubsection.5.8.3.8}
+\contentsline {section}{\numberline {5.9}MT.hpp File Reference}{69}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{69}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Function Documentation}{69}{subsection.5.9.2}
+\contentsline {subsubsection}{\numberline {5.9.2.1}genrand\_\discretionary {-}{}{}int31}{69}{subsubsection.5.9.2.1}
+\contentsline {subsubsection}{\numberline {5.9.2.2}genrand\_\discretionary {-}{}{}int32}{69}{subsubsection.5.9.2.2}
+\contentsline {subsubsection}{\numberline {5.9.2.3}genrand\_\discretionary {-}{}{}real1}{70}{subsubsection.5.9.2.3}
+\contentsline {subsubsection}{\numberline {5.9.2.4}genrand\_\discretionary {-}{}{}real2}{70}{subsubsection.5.9.2.4}
+\contentsline {subsubsection}{\numberline {5.9.2.5}genrand\_\discretionary {-}{}{}real3}{70}{subsubsection.5.9.2.5}
+\contentsline {subsubsection}{\numberline {5.9.2.6}genrand\_\discretionary {-}{}{}res53}{71}{subsubsection.5.9.2.6}
+\contentsline {subsubsection}{\numberline {5.9.2.7}init\_\discretionary {-}{}{}by\_\discretionary {-}{}{}array}{71}{subsubsection.5.9.2.7}
+\contentsline {subsubsection}{\numberline {5.9.2.8}init\_\discretionary {-}{}{}genrand}{71}{subsubsection.5.9.2.8}
+\contentsline {section}{\numberline {5.10}obj-function.cpp File Reference}{72}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{72}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.2}Function Documentation}{72}{subsection.5.10.2}
+\contentsline {subsubsection}{\numberline {5.10.2.1}is\_\discretionary {-}{}{}optimal}{72}{subsubsection.5.10.2.1}
+\contentsline {subsubsection}{\numberline {5.10.2.2}objective\_\discretionary {-}{}{}function}{73}{subsubsection.5.10.2.2}
+\contentsline {subsubsection}{\numberline {5.10.2.3}set\_\discretionary {-}{}{}num\_\discretionary {-}{}{}vals}{73}{subsubsection.5.10.2.3}
+\contentsline {section}{\numberline {5.11}obj-function.hpp File Reference}{75}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{75}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{75}{subsection.5.11.2}
+\contentsline {subsubsection}{\numberline {5.11.2.1}is\_\discretionary {-}{}{}optimal}{75}{subsubsection.5.11.2.1}
+\contentsline {subsubsection}{\numberline {5.11.2.2}objective\_\discretionary {-}{}{}function}{76}{subsubsection.5.11.2.2}
+\contentsline {subsubsection}{\numberline {5.11.2.3}set\_\discretionary {-}{}{}num\_\discretionary {-}{}{}vals}{76}{subsubsection.5.11.2.3}
+\contentsline {section}{\numberline {5.12}parse-input.cpp File Reference}{78}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{78}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.2}Define Documentation}{78}{subsection.5.12.2}
+\contentsline {subsubsection}{\numberline {5.12.2.1}MAX\_\discretionary {-}{}{}LINE\_\discretionary {-}{}{}WIDTH}{78}{subsubsection.5.12.2.1}
+\contentsline {subsection}{\numberline {5.12.3}Function Documentation}{79}{subsection.5.12.3}
+\contentsline {subsubsection}{\numberline {5.12.3.1}get\_\discretionary {-}{}{}int\_\discretionary {-}{}{}value}{79}{subsubsection.5.12.3.1}
+\contentsline {subsubsection}{\numberline {5.12.3.2}get\_\discretionary {-}{}{}new\_\discretionary {-}{}{}identifier}{79}{subsubsection.5.12.3.2}
+\contentsline {subsubsection}{\numberline {5.12.3.3}param\_\discretionary {-}{}{}help}{80}{subsubsection.5.12.3.3}
+\contentsline {subsubsection}{\numberline {5.12.3.4}parse\_\discretionary {-}{}{}input\_\discretionary {-}{}{}file}{80}{subsubsection.5.12.3.4}
+\contentsline {subsubsection}{\numberline {5.12.3.5}print\_\discretionary {-}{}{}parameters}{81}{subsubsection.5.12.3.5}
+\contentsline {section}{\numberline {5.13}parse-input.hpp File Reference}{83}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{83}{subsection.5.13.1}
+\contentsline {subsection}{\numberline {5.13.2}Function Documentation}{83}{subsection.5.13.2}
+\contentsline {subsubsection}{\numberline {5.13.2.1}get\_\discretionary {-}{}{}int\_\discretionary {-}{}{}value}{83}{subsubsection.5.13.2.1}
+\contentsline {subsubsection}{\numberline {5.13.2.2}get\_\discretionary {-}{}{}new\_\discretionary {-}{}{}identifier}{84}{subsubsection.5.13.2.2}
+\contentsline {subsubsection}{\numberline {5.13.2.3}param\_\discretionary {-}{}{}help}{85}{subsubsection.5.13.2.3}
+\contentsline {subsubsection}{\numberline {5.13.2.4}parse\_\discretionary {-}{}{}input\_\discretionary {-}{}{}file}{85}{subsubsection.5.13.2.4}
+\contentsline {subsubsection}{\numberline {5.13.2.5}print\_\discretionary {-}{}{}parameters}{86}{subsubsection.5.13.2.5}
+\contentsline {section}{\numberline {5.14}random.cpp File Reference}{87}{section.5.14}
+\contentsline {subsection}{\numberline {5.14.1}Detailed Description}{87}{subsection.5.14.1}
+\contentsline {subsection}{\numberline {5.14.2}Function Documentation}{87}{subsection.5.14.2}
+\contentsline {subsubsection}{\numberline {5.14.2.1}drand}{87}{subsubsection.5.14.2.1}
+\contentsline {subsubsection}{\numberline {5.14.2.2}flipCoin}{88}{subsubsection.5.14.2.2}
+\contentsline {subsubsection}{\numberline {5.14.2.3}gaussianRandom}{88}{subsubsection.5.14.2.3}
+\contentsline {subsubsection}{\numberline {5.14.2.4}intRand}{88}{subsubsection.5.14.2.4}
+\contentsline {subsubsection}{\numberline {5.14.2.5}longRand}{89}{subsubsection.5.14.2.5}
+\contentsline {subsubsection}{\numberline {5.14.2.6}setSeed}{89}{subsubsection.5.14.2.6}
+\contentsline {subsection}{\numberline {5.14.3}Variable Documentation}{89}{subsection.5.14.3}
+\contentsline {subsubsection}{\numberline {5.14.3.1}\_\discretionary {-}{}{}Q}{89}{subsubsection.5.14.3.1}
+\contentsline {subsubsection}{\numberline {5.14.3.2}\_\discretionary {-}{}{}R}{89}{subsubsection.5.14.3.2}
+\contentsline {subsubsection}{\numberline {5.14.3.3}\_\discretionary {-}{}{}seed}{89}{subsubsection.5.14.3.3}
+\contentsline {subsubsection}{\numberline {5.14.3.4}whichGaussian}{89}{subsubsection.5.14.3.4}
+\contentsline {section}{\numberline {5.15}random.hpp File Reference}{90}{section.5.15}
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{90}{subsection.5.15.1}
+\contentsline {subsection}{\numberline {5.15.2}Define Documentation}{90}{subsection.5.15.2}
+\contentsline {subsubsection}{\numberline {5.15.2.1}\_\discretionary {-}{}{}A}{90}{subsubsection.5.15.2.1}
+\contentsline {subsubsection}{\numberline {5.15.2.2}\_\discretionary {-}{}{}M}{90}{subsubsection.5.15.2.2}
+\contentsline {subsection}{\numberline {5.15.3}Function Documentation}{90}{subsection.5.15.3}
+\contentsline {subsubsection}{\numberline {5.15.3.1}drand}{90}{subsubsection.5.15.3.1}
+\contentsline {subsubsection}{\numberline {5.15.3.2}flipCoin}{91}{subsubsection.5.15.3.2}
+\contentsline {subsubsection}{\numberline {5.15.3.3}gaussianRandom}{91}{subsubsection.5.15.3.3}
+\contentsline {subsubsection}{\numberline {5.15.3.4}intRand}{92}{subsubsection.5.15.3.4}
+\contentsline {subsubsection}{\numberline {5.15.3.5}longRand}{92}{subsubsection.5.15.3.5}
+\contentsline {subsubsection}{\numberline {5.15.3.6}setSeed}{92}{subsubsection.5.15.3.6}
+\contentsline {section}{\numberline {5.16}stats.cpp File Reference}{93}{section.5.16}
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{93}{subsection.5.16.1}
+\contentsline {subsection}{\numberline {5.16.2}Function Documentation}{93}{subsection.5.16.2}
+\contentsline {subsubsection}{\numberline {5.16.2.1}average\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{93}{subsubsection.5.16.2.1}
+\contentsline {subsubsection}{\numberline {5.16.2.2}compute\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{94}{subsubsection.5.16.2.2}
+\contentsline {subsubsection}{\numberline {5.16.2.3}init\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{95}{subsubsection.5.16.2.3}
+\contentsline {section}{\numberline {5.17}stats.hpp File Reference}{96}{section.5.17}
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{96}{subsection.5.17.1}
+\contentsline {subsection}{\numberline {5.17.2}Function Documentation}{96}{subsection.5.17.2}
+\contentsline {subsubsection}{\numberline {5.17.2.1}average\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{96}{subsubsection.5.17.2.1}
+\contentsline {subsubsection}{\numberline {5.17.2.2}compute\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{97}{subsubsection.5.17.2.2}
+\contentsline {subsubsection}{\numberline {5.17.2.3}init\_\discretionary {-}{}{}population\_\discretionary {-}{}{}statistics}{98}{subsubsection.5.17.2.3}
+\contentsline {section}{\numberline {5.18}status.cpp File Reference}{99}{section.5.18}
+\contentsline {subsection}{\numberline {5.18.1}Detailed Description}{99}{subsection.5.18.1}
+\contentsline {section}{\numberline {5.19}status.hpp File Reference}{100}{section.5.19}
+\contentsline {subsection}{\numberline {5.19.1}Detailed Description}{100}{subsection.5.19.1}
+\contentsline {section}{\numberline {5.20}tree-model.cpp File Reference}{101}{section.5.20}
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{101}{subsection.5.20.1}
+\contentsline {section}{\numberline {5.21}tree-model.hpp File Reference}{102}{section.5.21}
+\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{102}{subsection.5.21.1}
+\contentsline {chapter}{\numberline {6}Dependency-Tree Estimation of Distribution Algorithm Example Documentation}{103}{chapter.6}
+\contentsline {section}{\numberline {6.1}example-num-values.cpp}{103}{section.6.1}
+\contentsline {section}{\numberline {6.2}example-trap5.cpp}{104}{section.6.2}
+\contentsline {section}{\numberline {6.3}example\_\discretionary {-}{}{}input}{105}{section.6.3}
+\contentsline {section}{\numberline {6.4}example\_\discretionary {-}{}{}input\_\discretionary {-}{}{}big}{106}{section.6.4}
+\contentsline {section}{\numberline {6.5}example\_\discretionary {-}{}{}input\_\discretionary {-}{}{}bisection}{107}{section.6.5}

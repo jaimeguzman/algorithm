@@ -1,0 +1,177 @@
+\hypertarget{stats_8hpp}{
+\section{stats.hpp File Reference}
+\label{stats_8hpp}\index{stats.hpp@{stats.hpp}}
+}
+Header file for \hyperlink{stats_8cpp}{stats.cpp}. 
+
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_population_statistics}{Population\-Statistics}
+\begin{CompactList}\small\item\em Basic population statistics (single run). \item\end{CompactList}\item 
+struct \hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics}
+\begin{CompactList}\small\item\em Population statistics for a set of runs. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{stats_8hpp_a7fd66cda3e240f089d86932c946b7c2}{init\_\-population\_\-statistics} (\hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Initialize the population statistics structure. \item\end{CompactList}\item 
+int \hyperlink{stats_8hpp_3ddb72b17ff7c8324994fa729741596d}{compute\_\-population\_\-statistics} (int $\ast$$\ast$x, double $\ast$f, int n, int N, int $\ast$num\_\-vals, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Compute basic population statistics like the maximum, mean, etc. \item\end{CompactList}\item 
+int \hyperlink{stats_8hpp_d546d85226735a391bd6ee38b9fa9c8c}{average\_\-population\_\-statistics} (\hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$avg, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats, int num\_\-runs)
+\begin{CompactList}\small\item\em Compute averages of population statistics over multiple runs. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{stats_8cpp}{stats.cpp}. 
+
+
+
+Definition in file \hyperlink{stats_8hpp-source}{stats.hpp}.
+
+\subsection{Function Documentation}
+\hypertarget{stats_8hpp_d546d85226735a391bd6ee38b9fa9c8c}{
+\index{stats.hpp@{stats.hpp}!average_population_statistics@{average\_\-population\_\-statistics}}
+\index{average_population_statistics@{average\_\-population\_\-statistics}!stats.hpp@{stats.hpp}}
+\subsubsection[average\_\-population\_\-statistics]{\setlength{\rightskip}{0pt plus 5cm}int average\_\-population\_\-statistics (\hyperlink{struct_average_population_statistics}{Average\-Population\-Statistics} $\ast$ {\em avg}, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats}, int {\em num\_\-runs})}}
+\label{stats_8hpp_d546d85226735a391bd6ee38b9fa9c8c}
+
+
+Compute averages of population statistics over multiple runs. 
+
+
+
+Definition at line 74 of file stats.cpp.
+
+References Average\-Population\-Statistics::avg\_\-avg\-F, Average\-Population\-Statistics::avg\_\-max\-F, Average\-Population\-Statistics::avg\_\-min\-F, Average\-Population\-Statistics::avg\_\-num\_\-evals, Population\-Statistics::avg\-F, Average\-Population\-Statistics::max\_\-max\-F, Population\-Statistics::max\-F, Average\-Population\-Statistics::min\_\-min\-F, Population\-Statistics::min\-F, Population\-Statistics::num\_\-evals, Average\-Population\-Statistics::num\_\-runs, Population\-Statistics::population\_\-size, Average\-Population\-Statistics::population\_\-size, Population\-Statistics::problem\_\-size, and Average\-Population\-Statistics::problem\_\-size.
+
+Referenced by do\_\-runs().
+
+\begin{Code}\begin{verbatim}75 {
+76   // initialize the average stats
+77 
+78   avg->avg_minF=stats[0].minF;
+79   avg->avg_maxF=stats[0].maxF;
+80   avg->avg_avgF=stats[0].avgF;
+81   avg->avg_num_evals=stats[0].num_evals;
+82 
+83   avg->min_minF=stats[0].minF;
+84   avg->max_maxF=stats[0].maxF;
+85 
+86   avg->population_size=stats[0].population_size;
+87   avg->problem_size=stats[0].problem_size;
+88   avg->num_runs=num_runs;
+89 
+90   // do the homework
+91 
+92   for (int run=1; run<num_runs; run++)
+93     {
+94       avg->avg_minF+=stats[run].minF;
+95       avg->avg_maxF+=stats[run].maxF;
+96       avg->avg_avgF+=stats[run].avgF;
+97       avg->avg_num_evals+=stats[run].num_evals;
+98 
+99       if (stats[run].minF<avg->min_minF)
+100         avg->min_minF=stats[run].minF;
+101 
+102       if (stats[run].maxF>avg->max_maxF)
+103         avg->max_maxF=stats[run].maxF;
+104     }
+105 
+106   avg->avg_minF/=num_runs;
+107   avg->avg_maxF/=num_runs;
+108   avg->avg_avgF/=num_runs; 
+109   avg->avg_num_evals/=num_runs;
+110 
+111   // return the number of processed runs
+112 
+113   return num_runs;
+114 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{stats_8hpp_3ddb72b17ff7c8324994fa729741596d}{
+\index{stats.hpp@{stats.hpp}!compute_population_statistics@{compute\_\-population\_\-statistics}}
+\index{compute_population_statistics@{compute\_\-population\_\-statistics}!stats.hpp@{stats.hpp}}
+\subsubsection[compute\_\-population\_\-statistics]{\setlength{\rightskip}{0pt plus 5cm}int compute\_\-population\_\-statistics (int $\ast$$\ast$ {\em x}, double $\ast$ {\em f}, int {\em n}, int {\em N}, int $\ast$ {\em num\_\-vals}, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats})}}
+\label{stats_8hpp_3ddb72b17ff7c8324994fa729741596d}
+
+
+Compute basic population statistics like the maximum, mean, etc. 
+
+
+
+Definition at line 15 of file stats.cpp.
+
+References Population\-Statistics::avg\-F, Population\-Statistics::idx\_\-max\-F, Population\-Statistics::idx\_\-min\-F, Population\-Statistics::max\-F, Population\-Statistics::min\-F, Population\-Statistics::population\_\-size, and Population\-Statistics::problem\_\-size.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}16 {
+17   // store population size and problem size
+18 
+19   stats->population_size=N;
+20   stats->problem_size=n;
+21 
+22   // compute basic fitness statistics
+23 
+24   stats->idx_minF = stats->idx_maxF = 0;
+25   stats->minF = stats->maxF = stats->avgF = f[0];
+26 
+27   for (int i=1; i<N; i++)
+28     {
+29       stats->avgF+=f[i];
+30 
+31       if (f[i]>stats->maxF)
+32         {
+33           stats->maxF=f[i];
+34           stats->idx_maxF=i;
+35         }
+36       else
+37         if (f[i]<stats->minF)
+38           {
+39             stats->minF=f[i];
+40             stats->idx_minF=i;
+41           }
+42     }
+43 
+44   stats->avgF/=N;
+45 
+46   // check whether we found the optimum
+47 
+48   if (is_optimal(x[stats->idx_maxF],n,num_vals))
+49     stats->success=1;
+50 
+51   // get back
+52 
+53   return 0;
+54 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{stats_8hpp_a7fd66cda3e240f089d86932c946b7c2}{
+\index{stats.hpp@{stats.hpp}!init_population_statistics@{init\_\-population\_\-statistics}}
+\index{init_population_statistics@{init\_\-population\_\-statistics}!stats.hpp@{stats.hpp}}
+\subsubsection[init\_\-population\_\-statistics]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-population\_\-statistics (\hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats})}}
+\label{stats_8hpp_a7fd66cda3e240f089d86932c946b7c2}
+
+
+Initialize the population statistics structure. 
+
+
+
+Definition at line 61 of file stats.cpp.
+
+References Population\-Statistics::avg\-F, Population\-Statistics::idx\_\-max\-F, Population\-Statistics::idx\_\-min\-F, Population\-Statistics::max\-F, Population\-Statistics::min\-F, Population\-Statistics::num\_\-evals, and Population\-Statistics::success.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}62 {
+63   stats->num_evals=0;
+64   stats->minF=stats->maxF=stats->avgF=0;
+65   stats->idx_minF=stats->idx_maxF=-1;
+66   stats->success=0;
+67 }
+\end{verbatim}\end{Code}
+
+

@@ -1,0 +1,556 @@
+\hypertarget{class_tree_model}{
+\section{Tree\-Model Class Reference}
+\label{class_tree_model}\index{TreeModel@{TreeModel}}
+}
+Class for storing, creating, and sampling the tree models.  
+
+
+{\tt \#include $<$tree-model.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_tree_model_eabf8492e9e205ae30e49f53e0d9957d}{Tree\-Model} (int n)
+\begin{CompactList}\small\item\em Constructor (assumes binary representation). \item\end{CompactList}\item 
+\hyperlink{class_tree_model_c3f6a449478d5948af2b605f3dc99bb9}{Tree\-Model} (int n, int $\ast$num\_\-vals)
+\begin{CompactList}\small\item\em Another constructor (assumes arbitrary finite alphabets). \item\end{CompactList}\item 
+\hyperlink{class_tree_model_f0998d55a63c2b18be1f03e4e8567926}{$\sim$Tree\-Model} ()
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+void \hyperlink{class_tree_model_3b38e54adca6bff1c6ec8eeb05cc3f24}{learn\-Structure} (int $\ast$$\ast$x, int N, int loud=1)
+\begin{CompactList}\small\item\em Learn the structure of the model. \item\end{CompactList}\item 
+void \hyperlink{class_tree_model_8d2749fa4535b449b74e2a53e3ad0645}{learn\-Probabilities} (int $\ast$$\ast$x, int N, int loud=1)
+\begin{CompactList}\small\item\em Learn the probabilities for a given structure. \item\end{CompactList}\item 
+void \hyperlink{class_tree_model_37e0258535bee44a401ac41f73725122}{sample\-Model} (int $\ast$$\ast$x, int N)
+\begin{CompactList}\small\item\em Sample the tree model to generate new candidate solutions. \item\end{CompactList}\item 
+void \hyperlink{class_tree_model_78a4e01188411739ffbe132a48afa78b}{print\-Model} (FILE $\ast$f)
+\begin{CompactList}\small\item\em Print the model into a stream. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Class for storing, creating, and sampling the tree models. 
+
+
+
+Definition at line 13 of file tree-model.hpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tree_model_eabf8492e9e205ae30e49f53e0d9957d}{
+\index{TreeModel@{Tree\-Model}!TreeModel@{TreeModel}}
+\index{TreeModel@{TreeModel}!TreeModel@{Tree\-Model}}
+\subsubsection[TreeModel]{\setlength{\rightskip}{0pt plus 5cm}Tree\-Model::Tree\-Model (int {\em n})}}
+\label{class_tree_model_eabf8492e9e205ae30e49f53e0d9957d}
+
+
+Constructor (assumes binary representation). 
+
+
+
+Definition at line 20 of file tree-model.cpp.
+
+\begin{Code}\begin{verbatim}21 {
+22   this->n=n;
+23 
+24   // assume all variables are binary
+25 
+26   num_vals=new int[n];
+27   for (int i=0; i<n; i++)
+28     num_vals[i]=2;
+29 
+30   // initialize some variables
+31 
+32   max_num_vals=2;
+33 
+34   mi_num = NULL;
+35   mi_p = NULL;
+36   mi_pi = NULL;
+37   mi_pj = NULL;
+38   succ = NULL;
+39   pred = NULL;
+40   num_succ = NULL;
+41   anc_order = NULL;
+42   prob = NULL;
+43   num_prob = NULL;
+44 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_tree_model_c3f6a449478d5948af2b605f3dc99bb9}{
+\index{TreeModel@{Tree\-Model}!TreeModel@{TreeModel}}
+\index{TreeModel@{TreeModel}!TreeModel@{Tree\-Model}}
+\subsubsection[TreeModel]{\setlength{\rightskip}{0pt plus 5cm}Tree\-Model::Tree\-Model (int {\em n}, int $\ast$ {\em num\_\-vals})}}
+\label{class_tree_model_c3f6a449478d5948af2b605f3dc99bb9}
+
+
+Another constructor (assumes arbitrary finite alphabets). 
+
+
+
+Definition at line 50 of file tree-model.cpp.
+
+\begin{Code}\begin{verbatim}51 {
+52   this->n=n;
+53 
+54   // store range of all variables
+55 
+56   this->num_vals=new int[n];
+57   max_num_vals=0;
+58   for (int i=0; i<n; i++)
+59     {
+60       this->num_vals[i]=num_vals[i];
+61       if (this->num_vals[i]>max_num_vals)
+62         max_num_vals=this->num_vals[i];
+63     }
+64 
+65   // initialize some variables
+66 
+67   mi_num = NULL;
+68   mi_p = NULL;
+69   mi_pi = NULL;
+70   mi_pj = NULL;
+71   succ = NULL;
+72   pred = NULL;
+73   num_succ = NULL;
+74   anc_order = NULL;
+75   prob = NULL;
+76 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_tree_model_f0998d55a63c2b18be1f03e4e8567926}{
+\index{TreeModel@{Tree\-Model}!~TreeModel@{$\sim$TreeModel}}
+\index{~TreeModel@{$\sim$TreeModel}!TreeModel@{Tree\-Model}}
+\subsubsection[$\sim$TreeModel]{\setlength{\rightskip}{0pt plus 5cm}Tree\-Model::$\sim$Tree\-Model ()}}
+\label{class_tree_model_f0998d55a63c2b18be1f03e4e8567926}
+
+
+Destructor. 
+
+
+
+Definition at line 82 of file tree-model.cpp.
+
+\begin{Code}\begin{verbatim}83 {
+84   // free memory used by the range of all variables
+85 
+86   delete[] num_vals;
+87 
+88   if (mi_num)
+89     delete[] mi_num;
+90   if (mi_p)
+91     delete[] mi_p;
+92   if (mi_pi)
+93     delete[] mi_pi;
+94   if (mi_pj)
+95     delete[] mi_pj;
+96   if (anc_order)
+97     delete[] anc_order;
+98   if (prob)
+99     {
+100       for (int i=0; i<n; i++)
+101         delete[] prob[i];
+102       delete[] prob;
+103       delete[] num_prob;
+104     };
+105 
+106   if (succ)
+107     {
+108        for (int i=0; i<n; i++)
+109          delete[] succ[i];
+110        delete[] succ;
+111        delete[] num_succ;
+112     }
+113 
+114   if (pred)
+115     delete[] pred; 
+116 }
+\end{verbatim}\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tree_model_8d2749fa4535b449b74e2a53e3ad0645}{
+\index{TreeModel@{Tree\-Model}!learnProbabilities@{learnProbabilities}}
+\index{learnProbabilities@{learnProbabilities}!TreeModel@{Tree\-Model}}
+\subsubsection[learnProbabilities]{\setlength{\rightskip}{0pt plus 5cm}void Tree\-Model::learn\-Probabilities (int $\ast$$\ast$ {\em x}, int {\em N}, int {\em loud} = {\tt 1})}}
+\label{class_tree_model_8d2749fa4535b449b74e2a53e3ad0645}
+
+
+Learn the probabilities for a given structure. 
+
+
+
+Definition at line 441 of file tree-model.cpp.
+
+References Status::update().
+
+Referenced by variation().
+
+\begin{Code}\begin{verbatim}442 {
+443   int i,j;
+444   Status *status=new Status();
+445 
+446   if (loud)
+447     printf("   learning model parameters\n");
+448 
+449   if (prob==NULL)
+450     {
+451       prob=new double*[n];
+452       num_prob=new int[n];
+453     }
+454   else
+455     for (i=0; i<n; i++)
+456       if (prob[i])
+457         delete[] prob[i];
+458 
+459   if (loud)
+460     printf("      phase 1/1: ");
+461 
+462   for (i=0; i<n; i++)
+463     {
+464       if (loud)
+465         status->update(((double)i)/n);
+466 
+467       if (pred[i]<0)
+468         {
+469           int k=num_vals[i];
+470           prob[i]=new double[k];
+471           num_prob[i]=k;
+472           for (j=0; j<k; j++)
+473             prob[i][j]=0;
+474 
+475           for (j=0; j<N; j++)
+476             prob[i][x[j][i]]+=1;
+477           for (j=0; j<k; j++)
+478             prob[i][j]=prob[i][j]/N;
+479         }
+480       else
+481         {
+482           int k=num_vals[i]*num_vals[pred[i]];
+483           prob[i]=new double[k];
+484           num_prob[i]=k;
+485           for (j=0; j<k; j++)
+486             prob[i][j]=0;
+487 
+488           int *total=new int[num_vals[pred[i]]];
+489           for (j=0; j<num_vals[pred[i]]; j++)
+490             total[j]=0;
+491 
+492           for (j=0; j<N; j++)
+493             {
+494               int idx=num_vals[pred[i]]*x[j][i]+x[j][pred[i]];
+495               prob[i][idx]+=1;
+496               total[x[j][pred[i]]]++;
+497             };
+498 
+499           for (j=0; j<k; j++)
+500             {
+501               int pred_value=j%num_vals[pred[i]];
+502               prob[i][j]=prob[i][j]/total[pred_value];
+503             };
+504 
+505           delete[] total;
+506         }
+507     }
+508   
+509   if (loud)
+510     {
+511       status->update(1);
+512       printf("\n");
+513     };
+514 
+515   delete status;
+516 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_tree_model_3b38e54adca6bff1c6ec8eeb05cc3f24}{
+\index{TreeModel@{Tree\-Model}!learnStructure@{learnStructure}}
+\index{learnStructure@{learnStructure}!TreeModel@{Tree\-Model}}
+\subsubsection[learnStructure]{\setlength{\rightskip}{0pt plus 5cm}void Tree\-Model::learn\-Structure (int $\ast$$\ast$ {\em x}, int {\em N}, int {\em loud} = {\tt 1})}}
+\label{class_tree_model_3b38e54adca6bff1c6ec8eeb05cc3f24}
+
+
+Learn the structure of the model. 
+
+
+
+Definition at line 200 of file tree-model.cpp.
+
+References build\_\-max\_\-heap(), HEAP\_\-MINUS\_\-INFINITY, increase\_\-key\_\-max\_\-heap(), int\-Rand(), pop\_\-max\_\-heap(), Status::reset(), and Status::update().
+
+Referenced by variation().
+
+\begin{Code}\begin{verbatim}201 {
+202   int i,j,k;
+203 
+204   // initialize the complete graph with I(i,j) weight on each edge (i,j)
+205 
+206   int num_edges=n*(n-1)/2;
+207 
+208   int *a=new int[num_edges];
+209   int *b=new int[num_edges];
+210   int *index=new int[num_edges];
+211   int *rev_index=new int[num_edges];
+212   int *selected=new int[n];
+213 
+214   Status *status = new Status();
+215 
+216   if (pred==NULL)
+217     pred=new int[n];
+218 
+219   double *weights = new double[num_edges];
+220   double *I = new double[num_edges];
+221 
+222   if (num_succ==NULL)
+223     num_succ=new int[n];
+224 
+225   int num_selected=0;
+226   int last_selected=-1;
+227   int last_predecessor=-1;
+228   int heap_size=0;
+229 
+230   if (loud)
+231     printf("   learning model structure\n");
+232 
+233   // initialize variables
+234 
+235   for (i=0; i<n; i++)
+236     {
+237       selected[i]=0;
+238       num_succ[i]=0;
+239     }
+240 
+241   // create the tree
+242 
+243   if (loud)
+244     {
+245       printf("      phase 1/2: ");
+246       status->reset();
+247       status->update(0);
+248     };
+249 
+250   for (i=1,k=0; i<n; i++)
+251     {
+252       for (j=0; j<i; j++,k++)
+253         {
+254           a[k]=j;
+255           b[k]=i;
+256           weights[k]=HEAP_MINUS_INFINITY;
+257           I[k]=mutualInformation(j,i,x,N);
+258           index[k]=k;
+259           rev_index[k]=k;
+260         };
+261 
+262       if (loud)
+263         status->update(((double)1.0*k)/num_edges);
+264     };
+265 
+266   if (loud)
+267     printf("\n");
+268 
+269   // build the initial heap
+270 
+271   build_max_heap(a,b,weights,num_edges,index,rev_index);
+272   heap_size=num_edges;
+273 
+274   // a random node is first selected (last_selected stores its index)
+275 
+276   last_selected = intRand(n);
+277   last_predecessor = -1;
+278   pred[last_selected]=-1;
+279   root = last_selected;
+280 
+281   // initialize the status bar
+282 
+283   if (loud)
+284     {
+285       printf("      phase 2/2: ");
+286       status->reset();
+287       status->update(0);
+288     };
+289 
+290   // we continue until all nodes have been selected
+291 
+292   while (num_selected<n)
+293     {
+294       selected[last_selected]=1;
+295       pred[last_selected]=last_predecessor;
+296       num_selected++;
+297       if (loud)
+298         status->update(((double) 1.0*num_selected)/n);
+299       
+300       if (last_predecessor>=0)
+301         num_succ[last_predecessor]++;
+302 
+303       // relax neighbors and find a new node to select (if not done)
+304 
+305       if (num_selected<n)
+306         {
+307 
+308           for (i=0; i<last_selected; i++)
+309             {
+310               int this_index=last_selected*(last_selected-1)/2+i;
+311               if (I[this_index]>weights[this_index])
+312                 increase_key_max_heap(weights,this_index,I[this_index],heap_size,index,rev_index);
+313             };
+314           
+315           for (i=last_selected+1; i<n; i++)
+316             {
+317               int this_index=i*(i-1)/2+last_selected;
+318               if (I[this_index]>weights[this_index])
+319                 increase_key_max_heap(weights,this_index,I[this_index],heap_size,index,rev_index);
+320             };
+321           
+322           do {
+323             i=pop_max_heap(weights,heap_size,index,rev_index);
+324           } while ((selected[a[i]])&&(selected[b[i]]));
+325 
+326           if (!selected[a[i]])
+327             {
+328               last_selected=a[i];
+329               last_predecessor=b[i];
+330             }
+331           else
+332             {
+333               last_selected=b[i];
+334               last_predecessor=a[i];
+335             };
+336         };
+337     };
+338   if (loud)
+339     printf("\n");
+340 
+341   // create the actual graph
+342 
+343   if (succ==NULL)
+344     succ=new int*[n];
+345   else
+346     for (i=0; i<n; i++)
+347       if (succ[i])
+348         delete[] succ[i];
+349   
+350   for (int i=0; i<n; i++)
+351     if (num_succ[i]>0)
+352       {
+353         succ[i]=new int[num_succ[i]];
+354         num_succ[i]=0;
+355       }
+356     else
+357       succ[i]=NULL;
+358 
+359   for (int i=0; i<n; i++)
+360     if (pred[i]>=0)
+361       {
+362         int p=pred[i];
+363 
+364         succ[p][num_succ[p]++]=i;
+365       }; 
+366 
+367   // compute the ancestral ordering
+368 
+369   if (anc_order==NULL)
+370     anc_order=new int[n];
+371 
+372   int count=0;
+373   anc_order[count]=root;
+374   ancestralOrderingRec(count);
+375 
+376   // free memory
+377 
+378   delete[] a;
+379   delete[] b;
+380 
+381   delete[] weights;
+382   delete[] selected;
+383   delete[] index;
+384   delete[] rev_index;
+385 
+386   delete[] I;
+387   delete status;
+388 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_tree_model_78a4e01188411739ffbe132a48afa78b}{
+\index{TreeModel@{Tree\-Model}!printModel@{printModel}}
+\index{printModel@{printModel}!TreeModel@{Tree\-Model}}
+\subsubsection[printModel]{\setlength{\rightskip}{0pt plus 5cm}void Tree\-Model::print\-Model (FILE $\ast$ {\em f})}}
+\label{class_tree_model_78a4e01188411739ffbe132a48afa78b}
+
+
+Print the model into a stream. 
+
+
+
+Definition at line 394 of file tree-model.cpp.
+
+\begin{Code}\begin{verbatim}395 {
+396   printf("\n-------------------------------------------------------------------------------\n");
+397   printf("Structure:\n");
+398   for (int i=0; i<n; i++)
+399     {
+400       printf("   %u",i);
+401       if (num_succ[i]>0)
+402         {
+403           printf(" ->");
+404           for (int j=0; j<num_succ[i]; j++)
+405             printf(" %u",succ[i][j]);
+406         };
+407       printf("\n");
+408     };
+409 
+410   printf("Probabilities:\n");
+411   for (int i=0; i<n; i++)
+412     {
+413       printf("   %2u: ",i);
+414       for (int j=0; j<num_prob[i]; j++)
+415         printf("%4.2f ",prob[i][j]);
+416       printf("\n");
+417     };
+418   printf("\n-------------------------------------------------------------------------------\n");
+419 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_tree_model_37e0258535bee44a401ac41f73725122}{
+\index{TreeModel@{Tree\-Model}!sampleModel@{sampleModel}}
+\index{sampleModel@{sampleModel}!TreeModel@{Tree\-Model}}
+\subsubsection[sampleModel]{\setlength{\rightskip}{0pt plus 5cm}void Tree\-Model::sample\-Model (int $\ast$$\ast$ {\em x}, int {\em N})}}
+\label{class_tree_model_37e0258535bee44a401ac41f73725122}
+
+
+Sample the tree model to generate new candidate solutions. 
+
+
+
+Definition at line 522 of file tree-model.cpp.
+
+Referenced by variation().
+
+\begin{Code}\begin{verbatim}523 {
+524   int i,j;
+525 
+526   for (i=0; i<N; i++)
+527     {
+528       int idx=anc_order[0];
+529       x[i][idx]=generate_marginal(num_vals[idx],prob[idx]);
+530       for (j=1; j<n; j++)
+531       {
+532         int idx=anc_order[j];
+533 
+534         // printf("can use max i=%u\n",num_prob[idx]);
+535 
+536         x[i][idx]=generate_conditional(num_vals[idx],num_vals[pred[idx]],prob[idx],x[i][pred[idx]]);
+537       }
+538     }
+539 }
+\end{verbatim}\end{Code}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{tree-model_8hpp}{tree-model.hpp}\item 
+\hyperlink{tree-model_8cpp}{tree-model.cpp}\end{CompactItemize}

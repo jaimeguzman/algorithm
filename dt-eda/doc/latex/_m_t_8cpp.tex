@@ -1,0 +1,330 @@
+\hypertarget{_m_t_8cpp}{
+\section{MT.cpp File Reference}
+\label{_m_t_8cpp}\index{MT.cpp@{MT.cpp}}
+}
+Mersenne Twister random number generator. 
+
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{_m_t_8cpp_0240ac851181b84ac374872dc5434ee4}{N}~624
+\item 
+\#define \hyperlink{_m_t_8cpp_52037c938e3c1b126c6277da5ca689d0}{M}~397
+\item 
+\#define \hyperlink{_m_t_8cpp_376c3581bae3c2367fc9ce694e5a8949}{MATRIX\_\-A}~0x9908b0df\-UL
+\item 
+\#define \hyperlink{_m_t_8cpp_39bc458849360f8f371b54c4365d397f}{UPPER\_\-MASK}~0x80000000UL
+\item 
+\#define \hyperlink{_m_t_8cpp_4ddd8cab3564b7a86a4b0e52ba08f70e}{LOWER\_\-MASK}~0x7fffffff\-UL
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+void \hyperlink{_m_t_8cpp_57af1d02a3fb56a949fb4c258f0bc066}{init\_\-genrand} (unsigned long s)
+\item 
+void \hyperlink{_m_t_8cpp_c1283f9b1ed571332f5ffe53545ffc16}{init\_\-by\_\-array} (unsigned long init\_\-key\mbox{[}$\,$\mbox{]}, int key\_\-length)
+\item 
+unsigned long \hyperlink{_m_t_8cpp_2b30ec504bc40c51320d14da9dfab43b}{genrand\_\-int32} (void)
+\item 
+long \hyperlink{_m_t_8cpp_6339fb46fb539f173518a6367f6616bd}{genrand\_\-int31} (void)
+\item 
+double \hyperlink{_m_t_8cpp_c94ab75771800274ed1a2bedeca86f04}{genrand\_\-real1} (void)
+\item 
+double \hyperlink{_m_t_8cpp_4ee58afbdf91669ff8a15fc19e627bea}{genrand\_\-real2} (void)
+\item 
+double \hyperlink{_m_t_8cpp_b1a90aa68ebfcd712cb05ed9061ecf44}{genrand\_\-real3} (void)
+\item 
+double \hyperlink{_m_t_8cpp_c821d41970276e53e85bde08b24536b8}{genrand\_\-res53} (void)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Mersenne Twister random number generator. 
+
+
+
+Definition in file \hyperlink{_m_t_8cpp-source}{MT.cpp}.
+
+\subsection{Define Documentation}
+\hypertarget{_m_t_8cpp_4ddd8cab3564b7a86a4b0e52ba08f70e}{
+\index{MT.cpp@{MT.cpp}!LOWER_MASK@{LOWER\_\-MASK}}
+\index{LOWER_MASK@{LOWER\_\-MASK}!MT.cpp@{MT.cpp}}
+\subsubsection[LOWER\_\-MASK]{\setlength{\rightskip}{0pt plus 5cm}\#define LOWER\_\-MASK~0x7fffffff\-UL}}
+\label{_m_t_8cpp_4ddd8cab3564b7a86a4b0e52ba08f70e}
+
+
+
+
+Definition at line 55 of file MT.cpp.
+
+Referenced by genrand\_\-int32().\hypertarget{_m_t_8cpp_52037c938e3c1b126c6277da5ca689d0}{
+\index{MT.cpp@{MT.cpp}!M@{M}}
+\index{M@{M}!MT.cpp@{MT.cpp}}
+\subsubsection[M]{\setlength{\rightskip}{0pt plus 5cm}\#define M~397}}
+\label{_m_t_8cpp_52037c938e3c1b126c6277da5ca689d0}
+
+
+
+
+Definition at line 52 of file MT.cpp.
+
+Referenced by genrand\_\-int32().\hypertarget{_m_t_8cpp_376c3581bae3c2367fc9ce694e5a8949}{
+\index{MT.cpp@{MT.cpp}!MATRIX_A@{MATRIX\_\-A}}
+\index{MATRIX_A@{MATRIX\_\-A}!MT.cpp@{MT.cpp}}
+\subsubsection[MATRIX\_\-A]{\setlength{\rightskip}{0pt plus 5cm}\#define MATRIX\_\-A~0x9908b0df\-UL}}
+\label{_m_t_8cpp_376c3581bae3c2367fc9ce694e5a8949}
+
+
+
+
+Definition at line 53 of file MT.cpp.
+
+Referenced by genrand\_\-int32().\hypertarget{_m_t_8cpp_0240ac851181b84ac374872dc5434ee4}{
+\index{MT.cpp@{MT.cpp}!N@{N}}
+\index{N@{N}!MT.cpp@{MT.cpp}}
+\subsubsection[N]{\setlength{\rightskip}{0pt plus 5cm}\#define N~624}}
+\label{_m_t_8cpp_0240ac851181b84ac374872dc5434ee4}
+
+
+
+
+Definition at line 51 of file MT.cpp.
+
+Referenced by genrand\_\-int32(), init\_\-by\_\-array(), init\_\-genrand(), one\_\-run(), and variation().\hypertarget{_m_t_8cpp_39bc458849360f8f371b54c4365d397f}{
+\index{MT.cpp@{MT.cpp}!UPPER_MASK@{UPPER\_\-MASK}}
+\index{UPPER_MASK@{UPPER\_\-MASK}!MT.cpp@{MT.cpp}}
+\subsubsection[UPPER\_\-MASK]{\setlength{\rightskip}{0pt plus 5cm}\#define UPPER\_\-MASK~0x80000000UL}}
+\label{_m_t_8cpp_39bc458849360f8f371b54c4365d397f}
+
+
+
+
+Definition at line 54 of file MT.cpp.
+
+Referenced by genrand\_\-int32().
+
+\subsection{Function Documentation}
+\hypertarget{_m_t_8cpp_6339fb46fb539f173518a6367f6616bd}{
+\index{MT.cpp@{MT.cpp}!genrand_int31@{genrand\_\-int31}}
+\index{genrand_int31@{genrand\_\-int31}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-int31]{\setlength{\rightskip}{0pt plus 5cm}long genrand\_\-int31 (void)}}
+\label{_m_t_8cpp_6339fb46fb539f173518a6367f6616bd}
+
+
+
+
+Definition at line 144 of file MT.cpp.
+
+References genrand\_\-int32().
+
+\begin{Code}\begin{verbatim}145 {
+146     return (long)(genrand_int32()>>1);
+147 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_2b30ec504bc40c51320d14da9dfab43b}{
+\index{MT.cpp@{MT.cpp}!genrand_int32@{genrand\_\-int32}}
+\index{genrand_int32@{genrand\_\-int32}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-int32]{\setlength{\rightskip}{0pt plus 5cm}unsigned long genrand\_\-int32 (void)}}
+\label{_m_t_8cpp_2b30ec504bc40c51320d14da9dfab43b}
+
+
+
+
+Definition at line 106 of file MT.cpp.
+
+References init\_\-genrand(), LOWER\_\-MASK, M, MATRIX\_\-A, N, and UPPER\_\-MASK.
+
+Referenced by genrand\_\-int31(), genrand\_\-real1(), genrand\_\-real2(), genrand\_\-real3(), and genrand\_\-res53().
+
+\begin{Code}\begin{verbatim}107 {
+108     unsigned long y;
+109     static unsigned long mag01[2]={0x0UL, MATRIX_A};
+110     /* mag01[x] = x * MATRIX_A  for x=0,1 */
+111 
+112     if (mti >= N) { /* generate N words at one time */
+113         int kk;
+114 
+115         if (mti == N+1)   /* if init_genrand() has not been called, */
+116             init_genrand(5489UL); /* a default initial seed is used */
+117 
+118         for (kk=0;kk<N-M;kk++) {
+119             y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
+120             mt[kk] = mt[kk+M] ^ (y >> 1) ^ mag01[y & 0x1UL];
+121         }
+122         for (;kk<N-1;kk++) {
+123             y = (mt[kk]&UPPER_MASK)|(mt[kk+1]&LOWER_MASK);
+124             mt[kk] = mt[kk+(M-N)] ^ (y >> 1) ^ mag01[y & 0x1UL];
+125         }
+126         y = (mt[N-1]&UPPER_MASK)|(mt[0]&LOWER_MASK);
+127         mt[N-1] = mt[M-1] ^ (y >> 1) ^ mag01[y & 0x1UL];
+128 
+129         mti = 0;
+130     }
+131   
+132     y = mt[mti++];
+133 
+134     /* Tempering */
+135     y ^= (y >> 11);
+136     y ^= (y << 7) & 0x9d2c5680UL;
+137     y ^= (y << 15) & 0xefc60000UL;
+138     y ^= (y >> 18);
+139 
+140     return y;
+141 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_c94ab75771800274ed1a2bedeca86f04}{
+\index{MT.cpp@{MT.cpp}!genrand_real1@{genrand\_\-real1}}
+\index{genrand_real1@{genrand\_\-real1}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-real1]{\setlength{\rightskip}{0pt plus 5cm}double genrand\_\-real1 (void)}}
+\label{_m_t_8cpp_c94ab75771800274ed1a2bedeca86f04}
+
+
+
+
+Definition at line 150 of file MT.cpp.
+
+References genrand\_\-int32().
+
+\begin{Code}\begin{verbatim}151 {
+152     return genrand_int32()*(1.0/4294967295.0); 
+153     /* divided by 2^32-1 */ 
+154 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_4ee58afbdf91669ff8a15fc19e627bea}{
+\index{MT.cpp@{MT.cpp}!genrand_real2@{genrand\_\-real2}}
+\index{genrand_real2@{genrand\_\-real2}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-real2]{\setlength{\rightskip}{0pt plus 5cm}double genrand\_\-real2 (void)}}
+\label{_m_t_8cpp_4ee58afbdf91669ff8a15fc19e627bea}
+
+
+
+
+Definition at line 157 of file MT.cpp.
+
+References genrand\_\-int32().
+
+Referenced by drand().
+
+\begin{Code}\begin{verbatim}158 {
+159     return genrand_int32()*(1.0/4294967296.0); 
+160     /* divided by 2^32 */
+161 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_b1a90aa68ebfcd712cb05ed9061ecf44}{
+\index{MT.cpp@{MT.cpp}!genrand_real3@{genrand\_\-real3}}
+\index{genrand_real3@{genrand\_\-real3}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-real3]{\setlength{\rightskip}{0pt plus 5cm}double genrand\_\-real3 (void)}}
+\label{_m_t_8cpp_b1a90aa68ebfcd712cb05ed9061ecf44}
+
+
+
+
+Definition at line 164 of file MT.cpp.
+
+References genrand\_\-int32().
+
+\begin{Code}\begin{verbatim}165 {
+166     return (((double)genrand_int32()) + 0.5)*(1.0/4294967296.0); 
+167     /* divided by 2^32 */
+168 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_c821d41970276e53e85bde08b24536b8}{
+\index{MT.cpp@{MT.cpp}!genrand_res53@{genrand\_\-res53}}
+\index{genrand_res53@{genrand\_\-res53}!MT.cpp@{MT.cpp}}
+\subsubsection[genrand\_\-res53]{\setlength{\rightskip}{0pt plus 5cm}double genrand\_\-res53 (void)}}
+\label{_m_t_8cpp_c821d41970276e53e85bde08b24536b8}
+
+
+
+
+Definition at line 171 of file MT.cpp.
+
+References genrand\_\-int32().
+
+\begin{Code}\begin{verbatim}172 { 
+173     unsigned long a=genrand_int32()>>5, b=genrand_int32()>>6; 
+174     return(a*67108864.0+b)*(1.0/9007199254740992.0); 
+175 } 
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_c1283f9b1ed571332f5ffe53545ffc16}{
+\index{MT.cpp@{MT.cpp}!init_by_array@{init\_\-by\_\-array}}
+\index{init_by_array@{init\_\-by\_\-array}!MT.cpp@{MT.cpp}}
+\subsubsection[init\_\-by\_\-array]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-by\_\-array (unsigned long {\em init\_\-key}\mbox{[}$\,$\mbox{]}, int {\em key\_\-length})}}
+\label{_m_t_8cpp_c1283f9b1ed571332f5ffe53545ffc16}
+
+
+
+
+Definition at line 80 of file MT.cpp.
+
+References init\_\-genrand(), and N.
+
+\begin{Code}\begin{verbatim}81 {
+82     int i, j, k;
+83     init_genrand(19650218UL);
+84     i=1; j=0;
+85     k = (N>key_length ? N : key_length);
+86     for (; k; k--) {
+87         mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >> 30)) * 1664525UL))
+88           + init_key[j] + j; /* non linear */
+89         mt[i] &= 0xffffffffUL; /* for WORDSIZE > 32 machines */
+90         i++; j++;
+91         if (i>=N) { mt[0] = mt[N-1]; i=1; }
+92         if (j>=key_length) j=0;
+93     }
+94     for (k=N-1; k; k--) {
+95         mt[i] = (mt[i] ^ ((mt[i-1] ^ (mt[i-1] >> 30)) * 1566083941UL))
+96           - i; /* non linear */
+97         mt[i] &= 0xffffffffUL; /* for WORDSIZE > 32 machines */
+98         i++;
+99         if (i>=N) { mt[0] = mt[N-1]; i=1; }
+100     }
+101 
+102     mt[0] = 0x80000000UL; /* MSB is 1; assuring non-zero initial array */ 
+103 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{_m_t_8cpp_57af1d02a3fb56a949fb4c258f0bc066}{
+\index{MT.cpp@{MT.cpp}!init_genrand@{init\_\-genrand}}
+\index{init_genrand@{init\_\-genrand}!MT.cpp@{MT.cpp}}
+\subsubsection[init\_\-genrand]{\setlength{\rightskip}{0pt plus 5cm}void init\_\-genrand (unsigned long {\em s})}}
+\label{_m_t_8cpp_57af1d02a3fb56a949fb4c258f0bc066}
+
+
+
+
+Definition at line 61 of file MT.cpp.
+
+References N.
+
+Referenced by genrand\_\-int32(), init\_\-by\_\-array(), and set\-Seed().
+
+\begin{Code}\begin{verbatim}62 {
+63     mt[0]= s & 0xffffffffUL;
+64     for (mti=1; mti<N; mti++) {
+65         mt[mti] = 
+66             (1812433253UL * (mt[mti-1] ^ (mt[mti-1] >> 30)) + mti); 
+67         /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
+68         /* In the previous versions, MSBs of the seed affect   */
+69         /* only MSBs of the array mt[].                        */
+70         /* 2002/01/09 modified by Makoto Matsumoto             */
+71         mt[mti] &= 0xffffffffUL;
+72         /* for >32 bit machines */
+73     }
+74 }
+\end{verbatim}\end{Code}
+
+

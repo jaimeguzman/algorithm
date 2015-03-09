@@ -1,0 +1,20 @@
+\hypertarget{example-num-values_8cpp-example}{
+\section{example-num-values.cpp}
+}
+An additional example of specifying the alphabets for all string positions. Here the first half of the symbols are binary whereas the remaining symbols can contain values from 0 to (n-1) where n is the string length. By default, a function that specifies all attributes as binary is included in the code.
+
+
+
+\begin{DocInclude}\begin{verbatim}1 void set_num_vals(int *num_vals, int n)
+2 {
+3   // set the number of values for the first half of the string to 2,
+4   // while in the remaining positions the number of symbols is n.
+5 
+6   for (int i=0; i<n/2; i++)
+7     num_vals[i]=2;
+8   for (int i=n/2+1; i<n; i++)
+9     num_vals[i]=n;
+10 }
+\end{verbatim}
+\end{DocInclude}
+ 

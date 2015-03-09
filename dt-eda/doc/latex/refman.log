@@ -1,0 +1,1222 @@
+This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=latex 2006.7.31)  13 SEP 2006 19:47
+entering extended mode
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**refman
+(./refman.tex
+LaTeX2e <2003/12/01>
+Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, b
+ahasa, basque, bulgarian, catalan, croatian, czech, danish, dutch, esperanto, e
+stonian, finnish, greek, icelandic, irish, italian, latin, magyar, norsk, polis
+h, portuges, romanian, russian, serbian, slovak, slovene, spanish, swedish, tur
+kish, ukrainian, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/book.cls
+Document Class: book 2004/02/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/bk10.clo
+File: bk10.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+))
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+(/usr/share/texmf/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.cfg
+File: graphics.cfg 2005/02/03 v1.3 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/tools/multicol.sty
+Package: multicol 2004/02/14 v1.6e multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count96
+\float@exts=\toks15
+\float@box=\box52
+\@float@everytoks=\toks16
+\@floatcapt=\box53
+)
+(/usr/share/texmf/tex/latex/base/textcomp.sty
+Package: textcomp 2004/02/22 v1.99f Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+\@linkdim=\dimen113
+\Hy@linkcounter=\count97
+\Hy@pagecounter=\count98
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
+Package hyperref Info: Hyper figures OFF on input line 1880.
+Package hyperref Info: Link nesting OFF on input line 1885.
+Package hyperref Info: Hyper index ON on input line 1888.
+Package hyperref Info: Plain pages ON on input line 1893.
+Package hyperref Info: Backreferencing ON on input line 1898.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2004.
+(/usr/share/texmf/tex/latex/hyperref/backref.sty
+Package: backref 2003/03/20 v1.23 Bibliographical back referencing
+)
+(/usr/share/texmf/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2143.
+\Fld@menulength=\count99
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+\Choice@toks=\toks17
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 2618.
+Package hyperref Info: Link nesting OFF on input line 2623.
+Package hyperref Info: Hyper index ON on input line 2626.
+Package hyperref Info: backreferencing ON on input line 2631.
+Package hyperref Info: Link coloring ON on input line 2636.
+\c@Item=\count100
+\c@Hfootnote=\count101
+)
+*hyperref using driver hpdftex*
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
+
+(/usr/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\Fld@listcount=\count102
+\@outlinefile=\write3
+) (./doxygen.sty
+Package: doxygen 
+
+(/usr/share/texmf/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen116
+\calc@Bdimen=\dimen117
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count105
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 2003/12/17 v2.4a Tabular extension package (FMi)
+\col@sep=\dimen118
+\extrarowheight=\dimen119
+\NC@list=\toks19
+\extratabsurround=\skip56
+\backup@length=\skip57
+)
+\tmplength=\skip58
+)
+(/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2004/02/22 v1.99f Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2004/02/22 v1.99f Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+\@indexfile=\write4
+\openout4 = `refman.idx'.
+
+
+Writing index file refman.idx
+(./refman.aux (./struct_parameters.aux) (./struct_population_statistics.aux)
+(./class_status.aux) (./class_tree_model.aux) (./bisection_8hpp.aux)
+(./eda_8cpp.aux) (./eda_8hpp.aux) (./heap_8cpp.aux) (./heap_8hpp.aux)
+(./main_8cpp.aux) (./_m_t_8cpp.aux) (./_m_t_8hpp.aux) (./obj-function_8cpp.aux)
+(./obj-function_8hpp.aux) (./parse-input_8cpp.aux) (./parse-input_8hpp.aux)
+(./random_8cpp.aux) (./random_8hpp.aux) (./stats_8cpp.aux) (./stats_8hpp.aux)
+(./status_8cpp.aux) (./status_8hpp.aux) (./tree-model_8cpp.aux)
+(./tree-model_8hpp.aux) (./example-trap5_8cpp-example.aux)
+(./example__input-example.aux) (./example__input__big-example.aux)
+(./example__input__bisection-example.aux))
+\openout1 = `refman.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 28.
+
+(/usr/share/texmf/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/graphics/color.cfg
+File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count106
+
+(/usr/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count107
+\scratchcounter=\count108
+\scratchtoks=\toks20
+\scratchdimen=\dimen120
+\scratchskip=\skip59
+\scratchmuskip=\muskip11
+\scratchbox=\box54
+\scratchread=\read1
+\scratchwrite=\write5
+\zeropoint=\dimen121
+\onepoint=\dimen122
+\onebasepoint=\dimen123
+\minusone=\count109
+\thousandpoint=\dimen124
+\onerealpoint=\dimen125
+\emptytoks=\toks21
+\nextbox=\box55
+\nextdepth=\dimen126
+\everyline=\toks22
+\!!counta=\count110
+\!!countb=\count111
+\recursecounter=\count112
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count113
+\nofMParguments=\count114
+\MPscratchCnt=\count115
+\MPscratchDim=\dimen127
+\MPnumerator=\count116
+\everyMPtoPDFconversion=\toks23
+)))
+Package hyperref Info: Link coloring ON on input line 28.
+ (/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
+\c@section@level=\count117
+)
+LaTeX Info: Redefining \ref on input line 28.
+LaTeX Info: Redefining \pageref on input line 28.
+ (./refman.out)
+(./refman.out)
+\openout3 = `refman.out'.
+
+ [1
+
+
+{/home/pelikan/.texmf/var/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] (./refman.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 2.
+
+./refman.toc:202: pdfTeX warning (ext4): destination with the same identifier (
+name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.202 ...dom.cpp File Reference}{87}{section.5.14}
+                                                   [1
+
+])
+\tf@toc=\write6
+\openout6 = `refman.toc'.
+
+
+./refman.tex:42: pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.42 \clearemptydoublepage
+                           [2]
+Chapter 1.
+(./index.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 3.
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 3209) in paragraph at lines 3--4
+[]\T1/cmr/m/n/10 For ref-er-ences and more in-for-ma-tion on es-ti-ma-tion of d
+is-tri-bu-tion al-go-rithms or de-
+ []
+
+
+Underfull \hbox (badness 4168) in paragraph at lines 3--4
+\T1/cmr/m/n/10 pen-dency tree mod-els, please see the MEDAL re-port pub-lished 
+with this code at
+ []
+
+)
+./refman.tex:46: pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.46 \chapter
+             {Dependency-Tree Estimation of Distribution Algorithm Data Stru...
+[1
+
+
+]
+./refman.tex:46: pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \penalty 
+l.46 \chapter
+             {Dependency-Tree Estimation of Distribution Algorithm Data Stru...
+[2
+
+]
+Chapter 2.
+(./annotated.tex) [3] [4
+
+]
+Chapter 3.
+(./files.tex) [5] [6
+
+]
+Chapter 4.
+(./struct_average_population_statistics.tex [7]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]) [9]
+\openout2 = `struct_parameters.aux'.
+
+ (./struct_parameters.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10
+
+]
+Underfull \hbox (badness 4279) in paragraph at lines 93--96
+[]\T1/cmr/m/n/10 Referenced by bi-sec-tion(), do_-runs(), main(), one_-run(), p
+arse_-input_-file(), print_-
+ []
+
+[11])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12]
+\openout2 = `struct_population_statistics.aux'.
+
+ (./struct_population_statistics.tex
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+[]\T1/cmr/m/n/10 Referenced by average_-population_-statistics(), compute_-popu
+lation_-statistics(), init_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--88
+[]\T1/cmr/m/n/10 Referenced by average_-population_-statistics(), compute_-popu
+lation_-statistics(), init_-
+ []
+
+[13
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+[]\T1/cmr/m/n/10 Referenced by average_-population_-statistics(), compute_-popu
+lation_-statistics(), init_-
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+\openout2 = `class_status.aux'.
+
+ (./class_status.tex [15
+
+
+])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[16]
+\openout2 = `class_tree_model.aux'.
+
+ (./class_tree_model.tex [17
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18] [19]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+Overfull \hbox (8.80792pt too wide) in paragraph at lines 472--472
+[]\T1/cmtt/m/n/8 312                 increase_key_max_heap(weights,this_index,I
+[this_index],heap_size,index,rev_index);[] 
+ []
+
+
+Overfull \hbox (8.80792pt too wide) in paragraph at lines 472--472
+[]\T1/cmtt/m/n/8 319                 increase_key_max_heap(weights,this_index,I
+[this_index],heap_size,index,rev_index);[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22] [23]
+Overfull \hbox (17.30585pt too wide) in paragraph at lines 548--548
+[]\T1/cmtt/m/n/8 536         x[i][idx]=generate_conditional(num_vals[idx],num_v
+als[pred[idx]],prob[idx],x[i][pred[idx]]);[] 
+ []
+
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 22.50113pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24]
+Chapter 5.
+(./bisection_8cpp.tex
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
+ [25
+
+
+]
+[26] [27]
+Underfull \hbox (badness 6220) in paragraph at lines 194--195
+[]\T1/cmr/m/n/10 References Average-Population-Statistics::avg_-max-F, Average-
+Population-Statistics::avg_-num_-
+ []
+
+) [28]
+\openout2 = `bisection_8hpp.aux'.
+
+ (./bisection_8hpp.tex [29
+
+]
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+ [30]
+Underfull \hbox (badness 6220) in paragraph at lines 189--190
+[]\T1/cmr/m/n/10 References Average-Population-Statistics::avg_-max-F, Average-
+Population-Statistics::avg_-num_-
+ []
+
+) [31]
+\openout2 = `eda_8cpp.aux'.
+
+ (./eda_8cpp.tex [32
+
+
+] [33] [34] [35]
+Underfull \hbox (badness 7704) in paragraph at lines 320--321
+[]\T1/cmr/m/n/10 References allocate_-population(), Pa-ram-e-ters::bisection, c
+ompute_-population_-statistics(),
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 320--321
+\T1/cmr/m/n/10 population_-statistics(), Parameters::max_-generations, N, Popul
+ation-Statistics::num_-evals,
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 320--321
+\T1/cmr/m/n/10 Parameters::population_-size, print_-status(), Parameters::probl
+em_-size, Parameters::quiet_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+\T1/cmr/m/n/10 mode, Pa-ram-e-ters::replacement, restricted_-tournament_-replac
+ement(), set_-num_-vals(),
+ []
+
+[36]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 522--523
+[]\T1/cmr/m/n/10 References Population-Statistics::max-F, Population-Statistics
+::num_-evals, Population-
+ []
+
+[39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 683--684
+[]\T1/cmr/m/n/10 References Tree-Model::learn-Probabilities(), Tree-Model::lear
+n-Structure(), N,
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 683--684
+\T1/cmr/m/n/10 Parameters::population_-size, Parameters::problem_-size, Tree-Mo
+del::sample-Model(), sep-a-ra-
+ []
+
+[41]) [42]
+\openout2 = `eda_8hpp.aux'.
+
+ (./eda_8hpp.tex [43
+
+
+] [44] [45]
+Underfull \hbox (badness 7704) in paragraph at lines 243--244
+[]\T1/cmr/m/n/10 References allocate_-population(), Pa-ram-e-ters::bisection, c
+ompute_-population_-statistics(),
+ []
+
+
+Underfull \hbox (badness 6157) in paragraph at lines 243--244
+\T1/cmr/m/n/10 population_-statistics(), Parameters::max_-generations, N, Popul
+ation-Statistics::num_-evals,
+ []
+
+
+Underfull \hbox (badness 1635) in paragraph at lines 243--244
+\T1/cmr/m/n/10 Parameters::population_-size, print_-status(), Parameters::probl
+em_-size, Parameters::quiet_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+\T1/cmr/m/n/10 mode, Pa-ram-e-ters::replacement, restricted_-tournament_-replac
+ement(), set_-num_-vals(),
+ []
+
+[46]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 445--446
+[]\T1/cmr/m/n/10 References Population-Statistics::max-F, Population-Statistics
+::num_-evals, Population-
+ []
+
+[49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
+[]\T1/cmr/m/n/10 References Tree-Model::learn-Probabilities(), Tree-Model::lear
+n-Structure(), N,
+ []
+
+
+Underfull \hbox (badness 2753) in paragraph at lines 606--607
+\T1/cmr/m/n/10 Parameters::population_-size, Parameters::problem_-size, Tree-Mo
+del::sample-Model(), sep-a-ra-
+ []
+
+) [51]
+\openout2 = `heap_8cpp.aux'.
+
+ (./heap_8cpp.tex [52
+
+
+] [53] [54] [55]) [56]
+\openout2 = `heap_8hpp.aux'.
+
+ (./heap_8hpp.tex [57
+
+
+]
+[58] [59] [60]) [61]
+\openout2 = `main_8cpp.aux'.
+
+ (./main_8cpp.tex
+Underfull \hbox (badness 2564) in paragraph at lines 44--45
+\T1/cmr/m/n/10 print_-bisection_-summary(), print_-parameters(), print_-summary
+(), Parameters::problem_-
+ []
+
+
+Underfull \hbox (badness 2237) in paragraph at lines 44--45
+\T1/cmr/m/n/10 size, Parameters::quiet_-mode, Pa-ram-e-ters::replacement, Param
+eters::tournament_-size, and
+ []
+
+[62
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63])
+[64]
+\openout2 = `_m_t_8cpp.aux'.
+
+ (./_m_t_8cpp.tex [65
+
+
+]
+Underfull \hbox (badness 1975) in paragraph at lines 139--140
+[]\T1/cmr/m/n/10 Referenced by genrand_-int31(), genrand_-real1(), genrand_-rea
+l2(), genrand_-real3(), and
+ []
+
+[66] [67]) [68]
+\openout2 = `_m_t_8hpp.aux'.
+
+ (./_m_t_8hpp.tex
+Underfull \hbox (badness 1975) in paragraph at lines 68--69
+[]\T1/cmr/m/n/10 Referenced by genrand_-int31(), genrand_-real1(), genrand_-rea
+l2(), genrand_-real3(), and
+ []
+
+[69
+
+
+] [70]) [71]
+\openout2 = `obj-function_8cpp.aux'.
+
+ (./obj-function_8cpp.tex [72
+
+
+] [73]) [74]
+\openout2 = `obj-function_8hpp.aux'.
+
+
+(./obj-function_8hpp.tex [75
+
+
+] [76]) [77]
+\openout2 = `parse-input_8cpp.aux'.
+
+ (./parse-input_8cpp.tex [78
+
+
+] [79]
+Overfull \hbox (55.54651pt too wide) in paragraph at lines 185--185
+[]\T1/cmtt/m/n/8 90   printf("  -> Replacement (0=restricted tournament repl., 
+1=full repl.):\n      replacement = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (25.80377pt too wide) in paragraph at lines 185--185
+[]\T1/cmtt/m/n/8 93   printf("  -> Number of successful runs for optimal popula
+tion sizing:\n      num_runs=<number>\n\n");[] 
+ []
+
+
+Overfull \hbox (25.80377pt too wide) in paragraph at lines 185--185
+[]\T1/cmtt/m/n/8 94   printf("  -> Quiet mode (prints only the end-of-the-run s
+ummary):\n      quiet_mode = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (21.55481pt too wide) in paragraph at lines 185--185
+[]\T1/cmtt/m/n/8 95   printf("  -> Verbose mode (do not use with redirected out
+put):\n      verbose_mode = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (30.05273pt too wide) in paragraph at lines 185--185
+[]\T1/cmtt/m/n/8 97   printf("See example_input, example_input_bisection, and e
+xample_input_big for example input files\n");[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+[]\T1/cmr/m/n/10 References Pa-ram-e-ters::bisection, get_-int_-value(), get_-n
+ew_-identifier(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+\T1/cmr/m/n/10 Parameters::max_-generations, MAX_-LINE_-WIDTH, Parameters::num_
+-bisection_-runs,
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 203--204
+\T1/cmr/m/n/10 Parameters::population_-size, Parameters::problem_-size, Paramet
+ers::quiet_-mode, Pa-ram-e-
+ []
+
+[80] [81]) [82]
+\openout2 = `parse-input_8hpp.aux'.
+
+ (./parse-input_8hpp.tex [83
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+Overfull \hbox (55.54651pt too wide) in paragraph at lines 161--161
+[]\T1/cmtt/m/n/8 90   printf("  -> Replacement (0=restricted tournament repl., 
+1=full repl.):\n      replacement = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (25.80377pt too wide) in paragraph at lines 161--161
+[]\T1/cmtt/m/n/8 93   printf("  -> Number of successful runs for optimal popula
+tion sizing:\n      num_runs=<number>\n\n");[] 
+ []
+
+
+Overfull \hbox (25.80377pt too wide) in paragraph at lines 161--161
+[]\T1/cmtt/m/n/8 94   printf("  -> Quiet mode (prints only the end-of-the-run s
+ummary):\n      quiet_mode = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (21.55481pt too wide) in paragraph at lines 161--161
+[]\T1/cmtt/m/n/8 95   printf("  -> Verbose mode (do not use with redirected out
+put):\n      verbose_mode = <number>\n\n");[] 
+ []
+
+
+Overfull \hbox (30.05273pt too wide) in paragraph at lines 161--161
+[]\T1/cmtt/m/n/8 97   printf("See example_input, example_input_bisection, and e
+xample_input_big for example input files\n");[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+[]\T1/cmr/m/n/10 References Pa-ram-e-ters::bisection, get_-int_-value(), get_-n
+ew_-identifier(),
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+\T1/cmr/m/n/10 Parameters::max_-generations, MAX_-LINE_-WIDTH, Parameters::num_
+-bisection_-runs,
+ []
+
+
+Underfull \hbox (badness 4505) in paragraph at lines 179--180
+\T1/cmr/m/n/10 Parameters::population_-size, Parameters::problem_-size, Paramet
+ers::quiet_-mode, Pa-ram-e-
+ []
+
+[85]) [86]
+\openout2 = `random_8cpp.aux'.
+
+ (./random_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+[]\T1/cmr/m/n/10 Referenced by flip-Coin(), gaussian-Random(), generate_-BB_-po
+pulation(), generate_-
+ []
+
+[87
+
+
+] [88]) [89]
+\openout2 = `random_8hpp.aux'.
+
+ (./random_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+[]\T1/cmr/m/n/10 Referenced by flip-Coin(), gaussian-Random(), generate_-BB_-po
+pulation(), generate_-
+ []
+
+[90
+
+
+] [91]) [92]
+\openout2 = `stats_8cpp.aux'.
+
+ (./stats_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+[]\T1/cmr/m/n/10 References Average-Population-Statistics::avg_-avg-F, Average-
+Population-Statistics::avg_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\T1/cmr/m/n/10 max-F, Average-Population-Statistics::avg_-min-F, Average-Popula
+tion-Statistics::avg_-num_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\T1/cmr/m/n/10 evals, Population-Statistics::avg-F, Average-Population-Statisti
+cs::max_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\T1/cmr/m/n/10 Statistics::max-F, Average-Population-Statistics::min_-min-F, Po
+pulation-Statistics::min-F,
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 41--42
+\T1/cmr/m/n/10 Population-Statistics::num_-evals, Average-Population-Statistics
+::num_-runs, Average-Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+\T1/cmr/m/n/10 Statistics::population_-size, Population-Statistics::population_
+-size, Average-Population-
+ []
+
+[93
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+[]\T1/cmr/m/n/10 References Population-Statistics::avg-F, Population-Statistics
+::idx_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
+\T1/cmr/m/n/10 Statistics::idx_-min-F, Population-Statistics::max-F, Population
+-Statistics::min-F, Population-
+ []
+
+[94]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+[]\T1/cmr/m/n/10 References Population-Statistics::avg-F, Population-Statistics
+::idx_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
+\T1/cmr/m/n/10 Statistics::idx_-min-F, Population-Statistics::max-F, Population
+-Statistics::min-F, Population-
+ []
+
+) [95]
+\openout2 = `stats_8hpp.aux'.
+
+ (./stats_8hpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+[]\T1/cmr/m/n/10 References Average-Population-Statistics::avg_-avg-F, Average-
+Population-Statistics::avg_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/cmr/m/n/10 max-F, Average-Population-Statistics::avg_-min-F, Average-Popula
+tion-Statistics::avg_-num_-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/cmr/m/n/10 evals, Population-Statistics::avg-F, Average-Population-Statisti
+cs::max_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/cmr/m/n/10 Statistics::max-F, Average-Population-Statistics::min_-min-F, Po
+pulation-Statistics::min-F,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/cmr/m/n/10 Population-Statistics::num_-evals, Average-Population-Statistics
+::num_-runs, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+\T1/cmr/m/n/10 Statistics::population_-size, Average-Population-Statistics::pop
+ulation_-size, Population-
+ []
+
+[96
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+[]\T1/cmr/m/n/10 References Population-Statistics::avg-F, Population-Statistics
+::idx_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\T1/cmr/m/n/10 Statistics::idx_-min-F, Population-Statistics::max-F, Population
+-Statistics::min-F, Population-
+ []
+
+[97]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+[]\T1/cmr/m/n/10 References Population-Statistics::avg-F, Population-Statistics
+::idx_-max-F, Population-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+\T1/cmr/m/n/10 Statistics::idx_-min-F, Population-Statistics::max-F, Population
+-Statistics::min-F, Population-
+ []
+
+) [98]
+\openout2 = `status_8cpp.aux'.
+
+ (./status_8cpp.tex) [99
+
+
+]
+\openout2 = `status_8hpp.aux'.
+
+ (./status_8hpp.tex) [100
+
+
+]
+\openout2 = `tree-model_8cpp.aux'.
+
+
+(./tree-model_8cpp.tex) [101
+
+
+]
+\openout2 = `tree-model_8hpp.aux'.
+
+ (./tree-model_8hpp.tex) [102
+
+
+]
+Chapter 6.
+(./example-num-values_8cpp-example.tex) [103
+
+
+]
+\openout2 = `example-trap5_8cpp-example.aux'.
+
+ (./example-trap5_8cpp-example.tex) [104
+
+]
+\openout2 = `example__input-example.aux'.
+
+ (./example__input-example.tex) [105
+
+
+]
+\openout2 = `example__input__big-example.aux'.
+
+ (./example__input__big-example.tex) [106
+
+
+]
+\openout2 = `example__input__bisection-example.aux'.
+
+ (./example__input__bisection-example.tex) [107
+
+
+]
+No file refman.ind.
+(./refman.aux (./struct_parameters.aux) (./struct_population_statistics.aux)
+(./class_status.aux) (./class_tree_model.aux) (./bisection_8hpp.aux)
+(./eda_8cpp.aux) (./eda_8hpp.aux) (./heap_8cpp.aux) (./heap_8hpp.aux)
+(./main_8cpp.aux) (./_m_t_8cpp.aux) (./_m_t_8hpp.aux) (./obj-function_8cpp.aux)
+(./obj-function_8hpp.aux) (./parse-input_8cpp.aux) (./parse-input_8hpp.aux)
+(./random_8cpp.aux) (./random_8hpp.aux) (./stats_8cpp.aux) (./stats_8hpp.aux)
+(./status_8cpp.aux) (./status_8hpp.aux) (./tree-model_8cpp.aux)
+(./tree-model_8hpp.aux) (./example-trap5_8cpp-example.aux)
+(./example__input-example.aux) (./example__input__big-example.aux)
+(./example__input__bisection-example.aux)) ) 
+Here is how much of TeX's memory you used:
+ 4876 strings out of 94501
+ 77806 string characters out of 1176789
+ 124571 words of memory out of 1000000
+ 7169 multiletter control sequences out of 10000+50000
+ 16706 words of font info for 34 fonts, out of 500000 for 2000
+ 580 hyphenation exceptions out of 1000
+ 28i,13n,43p,706b,429s stack positions out of 1500i,500n,5000p,200000b,5000s
+PDF statistics:
+ 1546 PDF objects out of 300000
+ 605 named destinations out of 131072
+ 337 words of extra memory for PDF output out of 65536
+
+! pdfTeX warning (dest): name{tree-model_8hpp-source} has been referenced but d
+oes not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{tree-model_8cpp-source} has been referenced but d
+oes not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{status_8hpp-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{status_8cpp-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{stats_8hpp-source} has been referenced but does n
+ot exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{stats_8cpp-source} has been referenced but does n
+ot exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{random_8hpp-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{random_8cpp-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{parse-input_8hpp-source} has been referenced but 
+does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{parse-input_8cpp-source} has been referenced but 
+does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{obj-function_8hpp-source} has been referenced but
+ does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{obj-function_8cpp-source} has been referenced but
+ does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{_m_t_8hpp-source} has been referenced but does no
+t exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{_m_t_8cpp-source} has been referenced but does no
+t exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{main_8cpp-source} has been referenced but does no
+t exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{heap_8hpp-source} has been referenced but does no
+t exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{heap_8cpp-source} has been referenced but does no
+t exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{eda_8hpp-source} has been referenced but does not
+ exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{eda_8cpp-source} has been referenced but does not
+ exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{bisection_8hpp-source} has been referenced but do
+es not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{bisection_8cpp-source} has been referenced but do
+es not exist, replaced by a fixed one
+
+ </var/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </var/cache/fonts/pk/l
+jfour/jknappen/ec/ecbi1000.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmsy1
+0.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecti0900.600pk> </var/cache/font
+s/pk/ljfour/jknappen/tc/tcrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec
+/ecbx1200.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb> </var/cach
+e/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jknap
+pen/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk> 
+</var/cache/fonts/pk/ljfour/jknappen/ec/ecbx0700.600pk> </var/cache/fonts/pk/lj
+four/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx10
+00.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </var/cache/f
+onts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </var/cache/fonts/pk/ljfour/jknappen
+/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk>
+Output written on refman.pdf (111 pages, 584972 bytes).

@@ -1,0 +1,639 @@
+\hypertarget{eda_8hpp}{
+\section{eda.hpp File Reference}
+\label{eda_8hpp}\index{eda.hpp@{eda.hpp}}
+}
+Header file for \hyperlink{eda_8cpp}{eda.cpp}. 
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include \char`\"{}stats.hpp\char`\"{}}\par
+\subsection*{Data Structures}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct_parameters}{Parameters}
+\begin{CompactList}\small\item\em Parameters for the decision-tree EDA (can be set using parameter files). \item\end{CompactList}\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{eda_8hpp_9b0a6b9ef45625cf62beee0698f29c38}{generate\_\-population} (int $\ast$$\ast$x, int n, int N)
+\item 
+int $\ast$$\ast$ \hyperlink{eda_8hpp_bad30812456a4a71d90a3612cd9793f7}{allocate\_\-population} (int n, int N)
+\begin{CompactList}\small\item\em Allocate memory for a new population of specified parameters. \item\end{CompactList}\item 
+void \hyperlink{eda_8hpp_a9eb525500760458e6348fa016194a73}{free\_\-population} (int $\ast$$\ast$x, int n, int N)
+\begin{CompactList}\small\item\em Free memory occupied by a population of specified parameters. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_fbba716ba914b45a09d2ebe73d592e75}{evaluate\_\-population} (int $\ast$$\ast$x, double $\ast$f, int n, int N)
+\item 
+int \hyperlink{eda_8hpp_b7834469dba3fdd4d1e73b368051dbae}{tournament\_\-selection} (int $\ast$$\ast$y, int $\ast$$\ast$x, double $\ast$f, int n, int N, int k)
+\begin{CompactList}\small\item\em Tournament selection with replacement (k-ary tournaments). \item\end{CompactList}\item 
+void \hyperlink{eda_8hpp_aea6e51089cae913316f55a552b9226c}{print\_\-population} (FILE $\ast$f, int $\ast$$\ast$x, int n, int N)
+\begin{CompactList}\small\item\em Print the population to the specified file. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_1d4a4cf7ab331605bd8baf7e88c4dd14}{restricted\_\-tournament\_\-replacement} (int $\ast$$\ast$y, int $\ast$$\ast$x, int n, int N, double $\ast$fx, double $\ast$fy)
+\begin{CompactList}\small\item\em Restricted tournament replacement (Harik, 1995) for niching. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_396cf5fd61462fac3746b312f12c5c69}{full\_\-replacement} (int $\ast$$\ast$y, int $\ast$$\ast$x, int n, int N, double $\ast$fx, double $\ast$fy)
+\begin{CompactList}\small\item\em Replace the entire old population with the new population. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_1329a1829493fea528b0e690ab69f94e}{individual\_\-distance} (int $\ast$x, int $\ast$y, int n)
+\begin{CompactList}\small\item\em Compute a distance between two individuals (number of non-matching chars). \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_8eef87c9ae12bcae144b6b020865df42}{variation} (int $\ast$$\ast$sampled\_\-population, int $\ast$$\ast$selected\_\-population, \hyperlink{struct_parameters}{Parameters} $\ast$params, int $\ast$num\_\-vals)
+\begin{CompactList}\small\item\em Variation operator of the decision-tree EDA (learns and samples model). \item\end{CompactList}\item 
+void \hyperlink{eda_8hpp_be5265230638c7fb37140688226999e2}{print\_\-status} (int t, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Print the status of the algorithm. \item\end{CompactList}\item 
+void \hyperlink{eda_8hpp_83b5f930be040dac41889ae6d326a47a}{print\_\-summary} (\hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Print summary of a run. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_334f5d73c2118df22dd59546965be64c}{one\_\-run} (\hyperlink{struct_parameters}{Parameters} $\ast$params, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$stats)
+\begin{CompactList}\small\item\em Execute one run of a decision-tree EDA with the specified parameters. \item\end{CompactList}\item 
+int \hyperlink{eda_8hpp_6691772a0d2ac34de31e1daf06e33343}{generate\_\-BB\_\-population} (int $\ast$$\ast$x, int n, int N, int k)
+\begin{CompactList}\small\item\em Generate a poulation full of blocks of 0s and 1s. Only for debugging. \item\end{CompactList}\item 
+void \hyperlink{eda_8hpp_bc382593d84d02abc91d4201dd91b806}{separator} (FILE $\ast$f, int type=1)
+\begin{CompactList}\small\item\em Print a sequence of dashes to separate text output. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{eda_8cpp}{eda.cpp}. 
+
+
+
+Definition in file \hyperlink{eda_8hpp-source}{eda.hpp}.
+
+\subsection{Function Documentation}
+\hypertarget{eda_8hpp_bad30812456a4a71d90a3612cd9793f7}{
+\index{eda.hpp@{eda.hpp}!allocate_population@{allocate\_\-population}}
+\index{allocate_population@{allocate\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[allocate\_\-population]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ allocate\_\-population (int {\em n}, int {\em N})}}
+\label{eda_8hpp_bad30812456a4a71d90a3612cd9793f7}
+
+
+Allocate memory for a new population of specified parameters. 
+
+
+
+Definition at line 84 of file eda.cpp.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}85 {
+86   int i;
+87   int **x;
+88 
+89   // allocate a population as a 2-dimensional int-array
+90 
+91   x=new int*[N];
+92   for (i=0; i<N; i++)
+93     x[i]=new int[n];
+94 
+95   // return the allocated array
+96 
+97   return x;
+98 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_fbba716ba914b45a09d2ebe73d592e75}{
+\index{eda.hpp@{eda.hpp}!evaluate_population@{evaluate\_\-population}}
+\index{evaluate_population@{evaluate\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[evaluate\_\-population]{\setlength{\rightskip}{0pt plus 5cm}int evaluate\_\-population (int $\ast$$\ast$ {\em x}, double $\ast$ {\em f}, int {\em n}, int {\em N})}}
+\label{eda_8hpp_fbba716ba914b45a09d2ebe73d592e75}
+
+
+\hypertarget{eda_8hpp_a9eb525500760458e6348fa016194a73}{
+\index{eda.hpp@{eda.hpp}!free_population@{free\_\-population}}
+\index{free_population@{free\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[free\_\-population]{\setlength{\rightskip}{0pt plus 5cm}void free\_\-population (int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N})}}
+\label{eda_8hpp_a9eb525500760458e6348fa016194a73}
+
+
+Free memory occupied by a population of specified parameters. 
+
+
+
+Definition at line 105 of file eda.cpp.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}106 {
+107   int i;
+108 
+109   // free memory used by the population
+110 
+111   for (i=0; i<N; i++)
+112     delete[] x[i];
+113 
+114   delete[] x;
+115 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_396cf5fd61462fac3746b312f12c5c69}{
+\index{eda.hpp@{eda.hpp}!full_replacement@{full\_\-replacement}}
+\index{full_replacement@{full\_\-replacement}!eda.hpp@{eda.hpp}}
+\subsubsection[full\_\-replacement]{\setlength{\rightskip}{0pt plus 5cm}int full\_\-replacement (int $\ast$$\ast$ {\em y}, int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N}, double $\ast$ {\em fx}, double $\ast$ {\em fy})}}
+\label{eda_8hpp_396cf5fd61462fac3746b312f12c5c69}
+
+
+Replace the entire old population with the new population. 
+
+
+
+Definition at line 243 of file eda.cpp.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}244 {
+245   int i;
+246 
+247   // just replace entire old population with the new guys
+248 
+249   for (i=0; i<N; i++)
+250     {
+251       memcpy(x[i],y[i],sizeof(x[i][0])*n);
+252       fx[i]=fy[i];
+253     }
+254 
+255   // return the number of processed new individuals
+256 
+257   return N;
+258 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_6691772a0d2ac34de31e1daf06e33343}{
+\index{eda.hpp@{eda.hpp}!generate_BB_population@{generate\_\-BB\_\-population}}
+\index{generate_BB_population@{generate\_\-BB\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[generate\_\-BB\_\-population]{\setlength{\rightskip}{0pt plus 5cm}int generate\_\-BB\_\-population (int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N}, int {\em k})}}
+\label{eda_8hpp_6691772a0d2ac34de31e1daf06e33343}
+
+
+Generate a poulation full of blocks of 0s and 1s. Only for debugging. 
+
+
+
+Definition at line 57 of file eda.cpp.
+
+References drand().
+
+\begin{Code}\begin{verbatim}58 {
+59   int i,j,l;
+60 
+61   // generate a population full of 000..0 and 111..1 building blocks
+62   // (used for testing the model building procedure, unnecessary for
+63   // practical applications)
+64 
+65   for (i=0; i<N; i++)
+66     for (j=0; j<n;)
+67       {
+68         int val=(drand()<0.5)? 0:1;
+69         
+70         for (l=0; l<k; l++)
+71           x[i][j++]=val;
+72     };
+73 
+74   // return the number of generated individuals
+75 
+76   return N;
+77 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_9b0a6b9ef45625cf62beee0698f29c38}{
+\index{eda.hpp@{eda.hpp}!generate_population@{generate\_\-population}}
+\index{generate_population@{generate\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[generate\_\-population]{\setlength{\rightskip}{0pt plus 5cm}int generate\_\-population (int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N})}}
+\label{eda_8hpp_9b0a6b9ef45625cf62beee0698f29c38}
+
+
+\hypertarget{eda_8hpp_1329a1829493fea528b0e690ab69f94e}{
+\index{eda.hpp@{eda.hpp}!individual_distance@{individual\_\-distance}}
+\index{individual_distance@{individual\_\-distance}!eda.hpp@{eda.hpp}}
+\subsubsection[individual\_\-distance]{\setlength{\rightskip}{0pt plus 5cm}int individual\_\-distance (int $\ast$ {\em x}, int $\ast$ {\em y}, int {\em n})}}
+\label{eda_8hpp_1329a1829493fea528b0e690ab69f94e}
+
+
+Compute a distance between two individuals (number of non-matching chars). 
+
+
+
+Definition at line 265 of file eda.cpp.
+
+Referenced by restricted\_\-tournament\_\-replacement().
+
+\begin{Code}\begin{verbatim}266 {
+267   int i;
+268   int d=0;
+269 
+270   for (i=0; i<n; i++)
+271     if (x[i]!=y[i])
+272       d++;
+273 
+274   return d;
+275 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_334f5d73c2118df22dd59546965be64c}{
+\index{eda.hpp@{eda.hpp}!one_run@{one\_\-run}}
+\index{one_run@{one\_\-run}!eda.hpp@{eda.hpp}}
+\subsubsection[one\_\-run]{\setlength{\rightskip}{0pt plus 5cm}int one\_\-run (\hyperlink{struct_parameters}{Parameters} $\ast$ {\em params}, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats})}}
+\label{eda_8hpp_334f5d73c2118df22dd59546965be64c}
+
+
+Execute one run of a decision-tree EDA with the specified parameters. 
+
+
+
+Definition at line 282 of file eda.cpp.
+
+References allocate\_\-population(), Parameters::bisection, compute\_\-population\_\-statistics(), evaluate\_\-population(), free\_\-population(), full\_\-replacement(), generate\_\-population(), init\_\-population\_\-statistics(), Parameters::max\_\-generations, N, Population\-Statistics::num\_\-evals, Parameters::population\_\-size, print\_\-status(), Parameters::problem\_\-size, Parameters::quiet\_\-mode, Parameters::replacement, restricted\_\-tournament\_\-replacement(), set\_\-num\_\-vals(), Population\-Statistics::success, tournament\_\-selection(), Parameters::tournament\_\-size, variation(), and Parameters::verbose\_\-mode.
+
+Referenced by do\_\-runs(), and main().
+
+\begin{Code}\begin{verbatim}283 {
+284   int N=params->population_size;
+285   int n=params->problem_size;
+286   int max_generations=params->max_generations;
+287 
+288   int **current_population;
+289   int **selected_population;
+290   int **sampled_population;
+291 
+292   double *current_f;
+293   double *sampled_f;
+294 
+295   int *num_vals = new int[n];
+296 
+297   // allocate populations and necessary fitness arrays
+298 
+299   current_population = allocate_population(n,N);
+300   selected_population = allocate_population(n,N);
+301   sampled_population = allocate_population(n,N);
+302   
+303   current_f = new double[N];
+304   sampled_f = new double[N];
+305 
+306   // initialize the replacement method
+307 
+308   ReplacementMethod *replacement;
+309   if (params->replacement==0)
+310     replacement=restricted_tournament_replacement;
+311   else
+312     if (params->replacement==1)
+313       replacement=full_replacement;
+314     else
+315       {
+316         printf("ERROR: Unknown replacement method (%u)\n",params->replacement);
+317         exit(-2);
+318       };
+319 
+320   // initialize the number of values
+321 
+322   set_num_vals(num_vals,n);
+323 
+324   // generate initial population
+325 
+326   generate_population(current_population,n,N,num_vals);
+327 
+328   // evaluate initial population
+329 
+330   evaluate_population(current_population,current_f,n,N,stats->num_evals);
+331 
+332   // initialize some main-loop variables
+333 
+334   int done=0;
+335   int t=0;
+336 
+337   // init the statistics and print the initial status information
+338 
+339   init_population_statistics(stats);
+340   compute_population_statistics(current_population,current_f,n,N,num_vals,stats);
+341   
+342   if (params->quiet_mode==0)
+343     print_status(t,stats);
+344   else
+345     params->verbose_mode=0;
+346 
+347   // main loop
+348 
+349   while (!done)
+350     {
+351       // increment generation counter
+352 
+353       t++;
+354 
+355       // selection
+356 
+357       tournament_selection(selected_population,
+358                            current_population,
+359                            current_f,
+360                            n,
+361                            N,
+362                            params->tournament_size);
+363 
+364       // variation
+365 
+366       variation(sampled_population,selected_population,params,num_vals);
+367 
+368       // evaluation of new candidates
+369       
+370       evaluate_population(sampled_population,sampled_f,n,N,stats->num_evals);
+371       
+372       // replacement
+373       
+374       replacement(current_population,
+375                   sampled_population,
+376                   n,
+377                   N,
+378                   current_f,
+379                   sampled_f);
+380 
+381       // statistics
+382 
+383       compute_population_statistics(current_population,current_f,n,N,num_vals,stats);
+384 
+385       // print current status
+386 
+387       if ((params->quiet_mode==0)&&(params->bisection==0))
+388         print_status(t,stats);
+389 
+390       // should terminate?
+391 
+392       if ((t>max_generations)||(stats->success==1))
+393         done=1;
+394     }
+395 
+396   // free memory
+397 
+398   delete[] num_vals;
+399   delete[] sampled_f;
+400   delete[] current_f;
+401 
+402   free_population(current_population,n,N);
+403   free_population(selected_population,n,N);
+404   free_population(sampled_population,n,N);
+405 
+406   // return with success/failure (0/1)
+407 
+408   return stats->success;
+409 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_aea6e51089cae913316f55a552b9226c}{
+\index{eda.hpp@{eda.hpp}!print_population@{print\_\-population}}
+\index{print_population@{print\_\-population}!eda.hpp@{eda.hpp}}
+\subsubsection[print\_\-population]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-population (FILE $\ast$ {\em f}, int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N})}}
+\label{eda_8hpp_aea6e51089cae913316f55a552b9226c}
+
+
+Print the population to the specified file. 
+
+
+
+Definition at line 175 of file eda.cpp.
+
+References objective\_\-function().
+
+\begin{Code}\begin{verbatim}176 {
+177   int i,j;
+178   
+179   for (i=0; i<N; i++)
+180     {
+181       for (j=0; j<n; j++)
+182         fprintf(f,"%u",x[i][j]);
+183       fprintf(f,"   %f\n",objective_function(x[i],n));
+184     };
+185 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_be5265230638c7fb37140688226999e2}{
+\index{eda.hpp@{eda.hpp}!print_status@{print\_\-status}}
+\index{print_status@{print\_\-status}!eda.hpp@{eda.hpp}}
+\subsubsection[print\_\-status]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-status (int {\em t}, \hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats})}}
+\label{eda_8hpp_be5265230638c7fb37140688226999e2}
+
+
+Print the status of the algorithm. 
+
+
+
+Definition at line 451 of file eda.cpp.
+
+References Population\-Statistics::avg\-F, Population\-Statistics::max\-F, Population\-Statistics::min\-F, and separator().
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}452 {
+453   printf("Generation: %u\n",t);
+454   printf("   min:  %f\n",stats->minF);
+455   printf("   max:  %f\n",stats->maxF);
+456   printf("   mean: %f\n",stats->avgF);
+457   separator(stdout);
+458 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_83b5f930be040dac41889ae6d326a47a}{
+\index{eda.hpp@{eda.hpp}!print_summary@{print\_\-summary}}
+\index{print_summary@{print\_\-summary}!eda.hpp@{eda.hpp}}
+\subsubsection[print\_\-summary]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-summary (\hyperlink{struct_population_statistics}{Population\-Statistics} $\ast$ {\em stats})}}
+\label{eda_8hpp_83b5f930be040dac41889ae6d326a47a}
+
+
+Print summary of a run. 
+
+
+
+Definition at line 478 of file eda.cpp.
+
+References Population\-Statistics::max\-F, Population\-Statistics::num\_\-evals, Population\-Statistics::population\_\-size, Population\-Statistics::problem\_\-size, and Population\-Statistics::success.
+
+Referenced by main().
+
+\begin{Code}\begin{verbatim}479 {
+480   printf("Summary:\n");
+481   printf("   status       = %s\n",(stats->success)? "success":"failure");
+482   printf("   best_found   = %f\n",stats->maxF);
+483   printf("   num_evals    = %lu\n",stats->num_evals);
+484   printf("   pop_size     = %u\n",stats->population_size);
+485   printf("   problem_size = %u\n",stats->problem_size);
+486 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_1d4a4cf7ab331605bd8baf7e88c4dd14}{
+\index{eda.hpp@{eda.hpp}!restricted_tournament_replacement@{restricted\_\-tournament\_\-replacement}}
+\index{restricted_tournament_replacement@{restricted\_\-tournament\_\-replacement}!eda.hpp@{eda.hpp}}
+\subsubsection[restricted\_\-tournament\_\-replacement]{\setlength{\rightskip}{0pt plus 5cm}int restricted\_\-tournament\_\-replacement (int $\ast$$\ast$ {\em y}, int $\ast$$\ast$ {\em x}, int {\em n}, int {\em N}, double $\ast$ {\em fx}, double $\ast$ {\em fy})}}
+\label{eda_8hpp_1d4a4cf7ab331605bd8baf7e88c4dd14}
+
+
+Restricted tournament replacement (Harik, 1995) for niching. 
+
+
+
+Definition at line 192 of file eda.cpp.
+
+References individual\_\-distance(), and int\-Rand().
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}193 {
+194   int i,j;
+195 
+196   // use default value for window size
+197 
+198   int windowSize=(n<N/20)? n:(N/20);
+199 
+200   // for every individual, do the same
+201 
+202   for (i=0; i<N; i++)
+203     {
+204       // select a random subset from the original population (window) and 
+205       // find the most similar guy to the new individual in this window
+206       // (string Hamming distance)
+207 
+208       int pick=intRand(N);
+209       int dist=individual_distance(x[i],y[pick],n);
+210 
+211       for (j=1; j<windowSize; j++)
+212         {
+213           int pick2=intRand(N);
+214           int dist2=individual_distance(x[i],y[pick2],n);
+215 
+216           if (dist2<dist)
+217             {
+218               pick=pick2;
+219               dist=dist2;
+220             }
+221         }
+222 
+223       // if the most similar guy from the window is better than the new guy,
+224       // the new guy replaces it
+225 
+226       if (fx[i]<fy[pick])
+227         {
+228           memcpy(x[i],y[pick],sizeof(x[i][0])*n);
+229           fx[i]=fy[pick];
+230         }
+231     }
+232 
+233   // return the number of processed new individuals
+234 
+235   return N;
+236 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_bc382593d84d02abc91d4201dd91b806}{
+\index{eda.hpp@{eda.hpp}!separator@{separator}}
+\index{separator@{separator}!eda.hpp@{eda.hpp}}
+\subsubsection[separator]{\setlength{\rightskip}{0pt plus 5cm}void separator (FILE $\ast$ {\em f}, int {\em type} = {\tt 1})}}
+\label{eda_8hpp_bc382593d84d02abc91d4201dd91b806}
+
+
+Print a sequence of dashes to separate text output. 
+
+
+
+Definition at line 465 of file eda.cpp.
+
+Referenced by bisection(), print\_\-parameters(), print\_\-status(), and variation().
+
+\begin{Code}\begin{verbatim}466 {
+467   if (type==0)
+468     fprintf(f,"- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
+469   else
+470     fprintf(f,"---------------------------------------------------------------------------\n");
+471 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_b7834469dba3fdd4d1e73b368051dbae}{
+\index{eda.hpp@{eda.hpp}!tournament_selection@{tournament\_\-selection}}
+\index{tournament_selection@{tournament\_\-selection}!eda.hpp@{eda.hpp}}
+\subsubsection[tournament\_\-selection]{\setlength{\rightskip}{0pt plus 5cm}int tournament\_\-selection (int $\ast$$\ast$ {\em y}, int $\ast$$\ast$ {\em x}, double $\ast$ {\em f}, int {\em n}, int {\em N}, int {\em k})}}
+\label{eda_8hpp_b7834469dba3fdd4d1e73b368051dbae}
+
+
+Tournament selection with replacement (k-ary tournaments). 
+
+
+
+Definition at line 143 of file eda.cpp.
+
+References int\-Rand().
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}144 {
+145   int i,j;
+146 
+147   for (i=0; i<N; i++)
+148     {
+149       // select a winner of k tournaments (with replacement)
+150 
+151       int winner=intRand(N);
+152       for (j=1; j<k; j++)
+153         {
+154           int l=intRand(N);
+155           if (f[l]>f[winner])
+156             winner=l;
+157         };
+158 
+159       // the winner takes the next spot in the selected population
+160 
+161       for (int ii=0; ii<n; ii++)
+162         y[i][ii]=x[winner][ii];
+163     };
+164 
+165   // return the number of selected individuals
+166 
+167   return N;
+168 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{eda_8hpp_8eef87c9ae12bcae144b6b020865df42}{
+\index{eda.hpp@{eda.hpp}!variation@{variation}}
+\index{variation@{variation}!eda.hpp@{eda.hpp}}
+\subsubsection[variation]{\setlength{\rightskip}{0pt plus 5cm}int variation (int $\ast$$\ast$ {\em sampled\_\-population}, int $\ast$$\ast$ {\em selected\_\-population}, \hyperlink{struct_parameters}{Parameters} $\ast$ {\em params}, int $\ast$ {\em num\_\-vals})}}
+\label{eda_8hpp_8eef87c9ae12bcae144b6b020865df42}
+
+
+Variation operator of the decision-tree EDA (learns and samples model). 
+
+
+
+Definition at line 416 of file eda.cpp.
+
+References Tree\-Model::learn\-Probabilities(), Tree\-Model::learn\-Structure(), N, Parameters::population\_\-size, Parameters::problem\_\-size, Tree\-Model::sample\-Model(), separator(), and Parameters::verbose\_\-mode.
+
+Referenced by one\_\-run().
+
+\begin{Code}\begin{verbatim}417 {
+418   int N=params->population_size;
+419   int n=params->problem_size;
+420   int loud=params->verbose_mode;
+421 
+422   if (loud)
+423     separator(stdout,0);
+424 
+425   TreeModel *t = new TreeModel(n, num_vals);
+426  
+427   // learn the model structure and model parameters
+428 
+429   t->learnStructure(selected_population,N,loud);
+430   t->learnProbabilities(selected_population,N,loud);
+431 
+432   // sample the learned model to generate new candidate solutions
+433 
+434   t->sampleModel(sampled_population,N);
+435 
+436   // free memory
+437 
+438   delete t;
+439 
+440   // return the number of generated individuals
+441 
+442   return N;
+443 }
+\end{verbatim}\end{Code}
+
+

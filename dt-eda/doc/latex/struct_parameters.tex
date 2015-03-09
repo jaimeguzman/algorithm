@@ -1,0 +1,162 @@
+\hypertarget{struct_parameters}{
+\section{Parameters Struct Reference}
+\label{struct_parameters}\index{Parameters@{Parameters}}
+}
+Parameters for the decision-tree EDA (can be set using parameter files).  
+
+
+{\tt \#include $<$eda.hpp$>$}
+
+\subsection*{Data Fields}
+\begin{CompactItemize}
+\item 
+int \hyperlink{struct_parameters_7d367fca1aa50edd6c5ebd6c34dab46f}{population\_\-size}
+\begin{CompactList}\small\item\em Population size. \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_451e60ea6b3d784e1093ca2a475ccec9}{problem\_\-size}
+\begin{CompactList}\small\item\em Number of variables (string positions). \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_d796bbf20113a349eed4f469fb80e04f}{max\_\-generations}
+\begin{CompactList}\small\item\em Maximum number of iterations. \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_8b65ec8ae34b43aab58df88d3a4fa160}{tournament\_\-size}
+\begin{CompactList}\small\item\em Size of tournaments. \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_64e0afb8fed55d4ede2af277ad258d42}{replacement}
+\begin{CompactList}\small\item\em Replacement method (RTR=0, full=1). \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_0b33fe6e096af04c8cee011807b06288}{bisection}
+\begin{CompactList}\small\item\em Optimize population size using bisection (must run many runs)? \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_5fcf099ba77f2cf31f3de4e7d190d97d}{num\_\-bisection\_\-runs}
+\begin{CompactList}\small\item\em Number of successful runs for optimal population sizing with bisection. \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_7c7a2312e852e436931e2ce6f6f082d2}{quiet\_\-mode}
+\begin{CompactList}\small\item\em Quiet mode? \item\end{CompactList}\item 
+int \hyperlink{struct_parameters_edbef1c42fc849f568bf3dc79398f8a7}{verbose\_\-mode}
+\begin{CompactList}\small\item\em Verbose mode? \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Parameters for the decision-tree EDA (can be set using parameter files). 
+
+
+
+Definition at line 15 of file eda.hpp.
+
+\subsection{Field Documentation}
+\hypertarget{struct_parameters_0b33fe6e096af04c8cee011807b06288}{
+\index{Parameters@{Parameters}!bisection@{bisection}}
+\index{bisection@{bisection}!Parameters@{Parameters}}
+\subsubsection[bisection]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_0b33fe6e096af04c8cee011807b06288}{Parameters::bisection}}}
+\label{struct_parameters_0b33fe6e096af04c8cee011807b06288}
+
+
+Optimize population size using bisection (must run many runs)? 
+
+
+
+Definition at line 21 of file eda.hpp.
+
+Referenced by main(), one\_\-run(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_d796bbf20113a349eed4f469fb80e04f}{
+\index{Parameters@{Parameters}!max_generations@{max\_\-generations}}
+\index{max_generations@{max\_\-generations}!Parameters@{Parameters}}
+\subsubsection[max\_\-generations]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_d796bbf20113a349eed4f469fb80e04f}{Parameters::max\_\-generations}}}
+\label{struct_parameters_d796bbf20113a349eed4f469fb80e04f}
+
+
+Maximum number of iterations. 
+
+
+
+Definition at line 18 of file eda.hpp.
+
+Referenced by main(), one\_\-run(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_5fcf099ba77f2cf31f3de4e7d190d97d}{
+\index{Parameters@{Parameters}!num_bisection_runs@{num\_\-bisection\_\-runs}}
+\index{num_bisection_runs@{num\_\-bisection\_\-runs}!Parameters@{Parameters}}
+\subsubsection[num\_\-bisection\_\-runs]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_5fcf099ba77f2cf31f3de4e7d190d97d}{Parameters::num\_\-bisection\_\-runs}}}
+\label{struct_parameters_5fcf099ba77f2cf31f3de4e7d190d97d}
+
+
+Number of successful runs for optimal population sizing with bisection. 
+
+
+
+Definition at line 22 of file eda.hpp.
+
+Referenced by do\_\-runs(), main(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_7d367fca1aa50edd6c5ebd6c34dab46f}{
+\index{Parameters@{Parameters}!population_size@{population\_\-size}}
+\index{population_size@{population\_\-size}!Parameters@{Parameters}}
+\subsubsection[population\_\-size]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_7d367fca1aa50edd6c5ebd6c34dab46f}{Parameters::population\_\-size}}}
+\label{struct_parameters_7d367fca1aa50edd6c5ebd6c34dab46f}
+
+
+Population size. 
+
+
+
+Definition at line 16 of file eda.hpp.
+
+Referenced by bisection(), do\_\-runs(), main(), one\_\-run(), parse\_\-input\_\-file(), print\_\-parameters(), and variation().\hypertarget{struct_parameters_451e60ea6b3d784e1093ca2a475ccec9}{
+\index{Parameters@{Parameters}!problem_size@{problem\_\-size}}
+\index{problem_size@{problem\_\-size}!Parameters@{Parameters}}
+\subsubsection[problem\_\-size]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_451e60ea6b3d784e1093ca2a475ccec9}{Parameters::problem\_\-size}}}
+\label{struct_parameters_451e60ea6b3d784e1093ca2a475ccec9}
+
+
+Number of variables (string positions). 
+
+
+
+Definition at line 17 of file eda.hpp.
+
+Referenced by main(), one\_\-run(), parse\_\-input\_\-file(), print\_\-parameters(), and variation().\hypertarget{struct_parameters_7c7a2312e852e436931e2ce6f6f082d2}{
+\index{Parameters@{Parameters}!quiet_mode@{quiet\_\-mode}}
+\index{quiet_mode@{quiet\_\-mode}!Parameters@{Parameters}}
+\subsubsection[quiet\_\-mode]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_7c7a2312e852e436931e2ce6f6f082d2}{Parameters::quiet\_\-mode}}}
+\label{struct_parameters_7c7a2312e852e436931e2ce6f6f082d2}
+
+
+Quiet mode? 
+
+
+
+Definition at line 23 of file eda.hpp.
+
+Referenced by bisection(), main(), one\_\-run(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_64e0afb8fed55d4ede2af277ad258d42}{
+\index{Parameters@{Parameters}!replacement@{replacement}}
+\index{replacement@{replacement}!Parameters@{Parameters}}
+\subsubsection[replacement]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_64e0afb8fed55d4ede2af277ad258d42}{Parameters::replacement}}}
+\label{struct_parameters_64e0afb8fed55d4ede2af277ad258d42}
+
+
+Replacement method (RTR=0, full=1). 
+
+
+
+Definition at line 20 of file eda.hpp.
+
+Referenced by main(), one\_\-run(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_8b65ec8ae34b43aab58df88d3a4fa160}{
+\index{Parameters@{Parameters}!tournament_size@{tournament\_\-size}}
+\index{tournament_size@{tournament\_\-size}!Parameters@{Parameters}}
+\subsubsection[tournament\_\-size]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_8b65ec8ae34b43aab58df88d3a4fa160}{Parameters::tournament\_\-size}}}
+\label{struct_parameters_8b65ec8ae34b43aab58df88d3a4fa160}
+
+
+Size of tournaments. 
+
+
+
+Definition at line 19 of file eda.hpp.
+
+Referenced by main(), one\_\-run(), parse\_\-input\_\-file(), and print\_\-parameters().\hypertarget{struct_parameters_edbef1c42fc849f568bf3dc79398f8a7}{
+\index{Parameters@{Parameters}!verbose_mode@{verbose\_\-mode}}
+\index{verbose_mode@{verbose\_\-mode}!Parameters@{Parameters}}
+\subsubsection[verbose\_\-mode]{\setlength{\rightskip}{0pt plus 5cm}int \hyperlink{struct_parameters_edbef1c42fc849f568bf3dc79398f8a7}{Parameters::verbose\_\-mode}}}
+\label{struct_parameters_edbef1c42fc849f568bf3dc79398f8a7}
+
+
+Verbose mode? 
+
+
+
+Definition at line 24 of file eda.hpp.
+
+Referenced by bisection(), main(), one\_\-run(), parse\_\-input\_\-file(), print\_\-parameters(), and variation().
+
+The documentation for this struct was generated from the following file:\begin{CompactItemize}
+\item 
+\hyperlink{eda_8hpp}{eda.hpp}\end{CompactItemize}

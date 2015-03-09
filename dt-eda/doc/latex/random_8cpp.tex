@@ -1,0 +1,253 @@
+\hypertarget{random_8cpp}{
+\section{random.cpp File Reference}
+\label{random_8cpp}\index{random.cpp@{random.cpp}}
+}
+Various random number generator related functions based on the basic generator in \hyperlink{_m_t_8cpp}{MT.cpp}. 
+
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include \char`\"{}random.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}MT.hpp\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+double \hyperlink{random_8cpp_0c0a81e7797a05c535bad34449d8642c}{drand} ()
+\item 
+int \hyperlink{random_8cpp_7b91d712d92b513a8c1cdb74fc981035}{int\-Rand} (int max)
+\item 
+long \hyperlink{random_8cpp_0a63185b60443650bab98202d6763278}{long\-Rand} (long max)
+\item 
+char \hyperlink{random_8cpp_7a83c6138a9a4df12f551be7598cecf5}{flip\-Coin} ()
+\item 
+unsigned long \hyperlink{random_8cpp_cac43b43dfdc628f4ea9ac539e8e7120}{set\-Seed} (unsigned long new\-Seed)
+\item 
+double \hyperlink{random_8cpp_6fbfd2ea371b7e6a20292303e46c8d46}{gaussian\-Random} (double mean, double stddev)
+\end{CompactItemize}
+\subsection*{Variables}
+\begin{CompactItemize}
+\item 
+long \hyperlink{random_8cpp_b20ec674549a4b392ac311f11481cba1}{\_\-Q} = \_\-M/\_\-A
+\item 
+long \hyperlink{random_8cpp_b6a679d0c5cf0b35a95a07482082cd9f}{\_\-R} = \_\-M\%\_\-A
+\item 
+long \hyperlink{random_8cpp_97a2a3f2a2fce809b4e07b95576336a7}{\_\-seed} = 123
+\item 
+char \hyperlink{random_8cpp_200d0f3b8fcd13c94ab689fd383d0f8b}{which\-Gaussian} = 0
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Various random number generator related functions based on the basic generator in \hyperlink{_m_t_8cpp}{MT.cpp}. 
+
+
+
+Definition in file \hyperlink{random_8cpp-source}{random.cpp}.
+
+\subsection{Function Documentation}
+\hypertarget{random_8cpp_0c0a81e7797a05c535bad34449d8642c}{
+\index{random.cpp@{random.cpp}!drand@{drand}}
+\index{drand@{drand}!random.cpp@{random.cpp}}
+\subsubsection[drand]{\setlength{\rightskip}{0pt plus 5cm}double drand ()}}
+\label{random_8cpp_0c0a81e7797a05c535bad34449d8642c}
+
+
+
+
+Definition at line 31 of file random.cpp.
+
+References genrand\_\-real2().
+
+Referenced by flip\-Coin(), gaussian\-Random(), generate\_\-BB\_\-population(), generate\_\-population(), int\-Rand(), and long\-Rand().
+
+\begin{Code}\begin{verbatim}32 {
+33 //   long lo,hi,test;
+34   
+35 //   hi   = _seed / _Q;
+36 //   lo   = _seed % _Q;
+37 //   test = _A*lo - _R*hi;
+38   
+39 //   if (test>0)
+40 //     _seed = test;
+41 //   else
+42 //     _seed = test+_M;
+43 
+44 //   return double(_seed)/_M;
+45   return genrand_real2();
+46 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{random_8cpp_7a83c6138a9a4df12f551be7598cecf5}{
+\index{random.cpp@{random.cpp}!flipCoin@{flipCoin}}
+\index{flipCoin@{flipCoin}!random.cpp@{random.cpp}}
+\subsubsection[flipCoin]{\setlength{\rightskip}{0pt plus 5cm}char flip\-Coin ()}}
+\label{random_8cpp_7a83c6138a9a4df12f551be7598cecf5}
+
+
+
+
+Definition at line 96 of file random.cpp.
+
+References drand().
+
+\begin{Code}\begin{verbatim}97 {
+98   if (drand()<0.5)
+99       return 1;
+100   else
+101       return 0;
+102 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{random_8cpp_6fbfd2ea371b7e6a20292303e46c8d46}{
+\index{random.cpp@{random.cpp}!gaussianRandom@{gaussianRandom}}
+\index{gaussianRandom@{gaussianRandom}!random.cpp@{random.cpp}}
+\subsubsection[gaussianRandom]{\setlength{\rightskip}{0pt plus 5cm}double gaussian\-Random (double {\em mean}, double {\em stddev})}}
+\label{random_8cpp_6fbfd2ea371b7e6a20292303e46c8d46}
+
+
+
+
+Definition at line 139 of file random.cpp.
+
+References drand().
+
+\begin{Code}\begin{verbatim}140 {
+141    double  q,u,v,x,y;
+142 
+143    /*  
+144       Generate P = (u,v) uniform in rect. enclosing acceptance region 
+145       Make sure that any random numbers <= 0 are rejected, since
+146       gaussian() requires uniforms > 0, but RandomUniform() delivers >= 0.
+147    */
+148    do {
+149       do { u=drand(); } while (u==0);
+150       do { v=drand(); } while (v==0);
+151 
+152       v = 1.7156 * (v - 0.5);
+153 
+154       /*  Evaluate the quadratic form */
+155       x = u - 0.449871;
+156       y = fabs(v) + 0.386595;
+157       q = x * x + y * (0.19600 * y - 0.25472 * x);
+158 
+159       /* Accept P if inside inner ellipse */
+160       if (q < 0.27597)
+161          break;
+162 
+163       /*  Reject P if outside outer ellipse, or outside acceptance region */
+164     } while ((q > 0.27846) || (v * v > -4.0 * log(u) * u * u));
+165 
+166     /*  Return ratio of P's coordinates as the normal deviate */
+167     return (mean + stddev * v / u);
+168 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{random_8cpp_7b91d712d92b513a8c1cdb74fc981035}{
+\index{random.cpp@{random.cpp}!intRand@{intRand}}
+\index{intRand@{intRand}!random.cpp@{random.cpp}}
+\subsubsection[intRand]{\setlength{\rightskip}{0pt plus 5cm}int int\-Rand (int {\em max})}}
+\label{random_8cpp_7b91d712d92b513a8c1cdb74fc981035}
+
+
+
+
+Definition at line 60 of file random.cpp.
+
+References drand().
+
+Referenced by generate\_\-population(), Tree\-Model::learn\-Structure(), restricted\_\-tournament\_\-replacement(), and tournament\_\-selection().
+
+\begin{Code}\begin{verbatim}61 {
+62 //   double r=drand();
+63 //   printf("r=%f\n",r);
+64   return (int) (drand()*max);
+65 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{random_8cpp_0a63185b60443650bab98202d6763278}{
+\index{random.cpp@{random.cpp}!longRand@{longRand}}
+\index{longRand@{longRand}!random.cpp@{random.cpp}}
+\subsubsection[longRand]{\setlength{\rightskip}{0pt plus 5cm}long long\-Rand (long {\em max})}}
+\label{random_8cpp_0a63185b60443650bab98202d6763278}
+
+
+
+
+Definition at line 79 of file random.cpp.
+
+References drand().
+
+\begin{Code}\begin{verbatim}80 {
+81    return (long) ((double) drand()*max);
+82 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{random_8cpp_cac43b43dfdc628f4ea9ac539e8e7120}{
+\index{random.cpp@{random.cpp}!setSeed@{setSeed}}
+\index{setSeed@{setSeed}!random.cpp@{random.cpp}}
+\subsubsection[setSeed]{\setlength{\rightskip}{0pt plus 5cm}unsigned long set\-Seed (unsigned long {\em new\-Seed})}}
+\label{random_8cpp_cac43b43dfdc628f4ea9ac539e8e7120}
+
+
+
+
+Definition at line 116 of file random.cpp.
+
+References init\_\-genrand().
+
+Referenced by parse\_\-input\_\-file().
+
+\begin{Code}\begin{verbatim}117 {
+118   // set the seed and return the result of the operation
+119   
+120   init_genrand(newSeed);
+121 
+122   return newSeed;
+123 };
+\end{verbatim}\end{Code}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{random_8cpp_b20ec674549a4b392ac311f11481cba1}{
+\index{random.cpp@{random.cpp}!_Q@{\_\-Q}}
+\index{_Q@{\_\-Q}!random.cpp@{random.cpp}}
+\subsubsection[\_\-Q]{\setlength{\rightskip}{0pt plus 5cm}long \hyperlink{random_8cpp_b20ec674549a4b392ac311f11481cba1}{\_\-Q} = \_\-M/\_\-A}}
+\label{random_8cpp_b20ec674549a4b392ac311f11481cba1}
+
+
+
+
+Definition at line 12 of file random.cpp.\hypertarget{random_8cpp_b6a679d0c5cf0b35a95a07482082cd9f}{
+\index{random.cpp@{random.cpp}!_R@{\_\-R}}
+\index{_R@{\_\-R}!random.cpp@{random.cpp}}
+\subsubsection[\_\-R]{\setlength{\rightskip}{0pt plus 5cm}long \hyperlink{random_8cpp_b6a679d0c5cf0b35a95a07482082cd9f}{\_\-R} = \_\-M\%\_\-A}}
+\label{random_8cpp_b6a679d0c5cf0b35a95a07482082cd9f}
+
+
+
+
+Definition at line 13 of file random.cpp.\hypertarget{random_8cpp_97a2a3f2a2fce809b4e07b95576336a7}{
+\index{random.cpp@{random.cpp}!_seed@{\_\-seed}}
+\index{_seed@{\_\-seed}!random.cpp@{random.cpp}}
+\subsubsection[\_\-seed]{\setlength{\rightskip}{0pt plus 5cm}long \hyperlink{random_8cpp_97a2a3f2a2fce809b4e07b95576336a7}{\_\-seed} = 123}}
+\label{random_8cpp_97a2a3f2a2fce809b4e07b95576336a7}
+
+
+
+
+Definition at line 14 of file random.cpp.\hypertarget{random_8cpp_200d0f3b8fcd13c94ab689fd383d0f8b}{
+\index{random.cpp@{random.cpp}!whichGaussian@{whichGaussian}}
+\index{whichGaussian@{whichGaussian}!random.cpp@{random.cpp}}
+\subsubsection[whichGaussian]{\setlength{\rightskip}{0pt plus 5cm}char \hyperlink{random_8cpp_200d0f3b8fcd13c94ab689fd383d0f8b}{which\-Gaussian} = 0}}
+\label{random_8cpp_200d0f3b8fcd13c94ab689fd383d0f8b}
+
+
+
+
+Definition at line 16 of file random.cpp.

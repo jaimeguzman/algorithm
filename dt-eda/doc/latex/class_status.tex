@@ -1,0 +1,130 @@
+\hypertarget{class_status}{
+\section{Status Class Reference}
+\label{class_status}\index{Status@{Status}}
+}
+Text-mode status bar used in verbose mode in learning algorithms.  
+
+
+{\tt \#include $<$status.hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{class_status_e968b7176c1c82c8b020b1ac956ac882}{Status} (int n=55)
+\item 
+void \hyperlink{class_status_13804447fd8e38409dce866c8b77703f}{update} (double p)
+\item 
+\hyperlink{class_status_1b24d90ef2560afffe9d7183e279c63c}{$\sim$Status} ()
+\item 
+void \hyperlink{class_status_5fc321167c6d5eae2dde25c6e01aae8e}{reset} ()
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Text-mode status bar used in verbose mode in learning algorithms. 
+
+
+
+Definition at line 8 of file status.hpp.
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_status_e968b7176c1c82c8b020b1ac956ac882}{
+\index{Status@{Status}!Status@{Status}}
+\index{Status@{Status}!Status@{Status}}
+\subsubsection[Status]{\setlength{\rightskip}{0pt plus 5cm}Status::Status (int {\em n} = {\tt 55})}}
+\label{class_status_e968b7176c1c82c8b020b1ac956ac882}
+
+
+
+
+Definition at line 10 of file status.cpp.
+
+\begin{Code}\begin{verbatim}11 {
+12   last=-1;
+13   this->n=n;
+14 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_status_1b24d90ef2560afffe9d7183e279c63c}{
+\index{Status@{Status}!~Status@{$\sim$Status}}
+\index{~Status@{$\sim$Status}!Status@{Status}}
+\subsubsection[$\sim$Status]{\setlength{\rightskip}{0pt plus 5cm}Status::$\sim$Status ()}}
+\label{class_status_1b24d90ef2560afffe9d7183e279c63c}
+
+
+
+
+Definition at line 16 of file status.cpp.
+
+\begin{Code}\begin{verbatim}17 {
+18 }
+\end{verbatim}\end{Code}
+
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_status_5fc321167c6d5eae2dde25c6e01aae8e}{
+\index{Status@{Status}!reset@{reset}}
+\index{reset@{reset}!Status@{Status}}
+\subsubsection[reset]{\setlength{\rightskip}{0pt plus 5cm}void Status::reset ()}}
+\label{class_status_5fc321167c6d5eae2dde25c6e01aae8e}
+
+
+
+
+Definition at line 44 of file status.cpp.
+
+Referenced by Tree\-Model::learn\-Structure().
+
+\begin{Code}\begin{verbatim}45 {
+46   last=-1;
+47 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{class_status_13804447fd8e38409dce866c8b77703f}{
+\index{Status@{Status}!update@{update}}
+\index{update@{update}!Status@{Status}}
+\subsubsection[update]{\setlength{\rightskip}{0pt plus 5cm}void Status::update (double {\em p})}}
+\label{class_status_13804447fd8e38409dce866c8b77703f}
+
+
+
+
+Definition at line 20 of file status.cpp.
+
+Referenced by Tree\-Model::learn\-Probabilities(), and Tree\-Model::learn\-Structure().
+
+\begin{Code}\begin{verbatim}21 {
+22   int i,k;
+23 
+24   k=(int)((double)p*n);
+25 
+26   if (last!=k)
+27     {
+28       if (last>=0)
+29         for (i=0; i<n+2; i++)
+30           printf("\b");
+31       
+32       printf("[");
+33       for (i=0; i<k; i++)
+34         printf("=");
+35       for (i=n-k; i>0; i--)
+36         printf("-");
+37       printf("]");
+38       fflush(stdout);
+39       
+40       last=k;
+41     };
+42 }
+\end{verbatim}\end{Code}
+
+
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+\hyperlink{status_8hpp}{status.hpp}\item 
+\hyperlink{status_8cpp}{status.cpp}\end{CompactItemize}

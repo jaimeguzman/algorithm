@@ -1,0 +1,300 @@
+\hypertarget{heap_8hpp}{
+\section{heap.hpp File Reference}
+\label{heap_8hpp}\index{heap.hpp@{heap.hpp}}
+}
+Header file for \hyperlink{heap_8cpp}{heap.cpp}. 
+
+\subsection*{Defines}
+\begin{CompactItemize}
+\item 
+\#define \hyperlink{heap_8hpp_423b8ed0ab54ed8b378e0871c4bb54a1}{HEAP\_\-MINUS\_\-INFINITY}~-1
+\end{CompactItemize}
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{heap_8hpp_57de289144d3c948d6fcd8bb469e66f7}{max\_\-heapify} (double $\ast$x, int i, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Run max-heapify on a specified element of a heap (push down). \item\end{CompactList}\item 
+int \hyperlink{heap_8hpp_9a7b5521ec847bff1af3dbe524f0b376}{build\_\-max\_\-heap} (int $\ast$a, int $\ast$b, double $\ast$x, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Build a max-heap for a given array. \item\end{CompactList}\item 
+int \hyperlink{heap_8hpp_668e138412dbab3baf4e87d543f90870}{float\_\-up\_\-max\_\-heap} (double $\ast$x, int i, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Float up an element up the heap (after increasing its value). \item\end{CompactList}\item 
+int \hyperlink{heap_8hpp_d33e06bba2950d85f9aca3f1a47d2a8e}{increase\_\-key\_\-max\_\-heap} (double $\ast$x, int i, double val, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Increase a given key in the heap. \item\end{CompactList}\item 
+int \hyperlink{heap_8hpp_9d9bfd1029dc45808a4eb11ef7e4d6fa}{pop\_\-max\_\-heap} (double $\ast$x, int \&n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Pop the maximum (includes the removal of maximum). \item\end{CompactList}\item 
+void \hyperlink{heap_8hpp_4e2ff0b6f88983d968a8c17562fa7e19}{print\_\-max\_\-heap} (double $\ast$x, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Print the max heap (used mostly for debugging). \item\end{CompactList}\item 
+int \hyperlink{heap_8hpp_33f6dccbcfc6a403dce7e8ab78a69af8}{check\_\-max\_\-heap} (double $\ast$x, int n, int $\ast$index, int $\ast$rev\_\-index)
+\begin{CompactList}\small\item\em Check the max heap for errors (used mostly in debugging). \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Header file for \hyperlink{heap_8cpp}{heap.cpp}. 
+
+
+
+Definition in file \hyperlink{heap_8hpp-source}{heap.hpp}.
+
+\subsection{Define Documentation}
+\hypertarget{heap_8hpp_423b8ed0ab54ed8b378e0871c4bb54a1}{
+\index{heap.hpp@{heap.hpp}!HEAP_MINUS_INFINITY@{HEAP\_\-MINUS\_\-INFINITY}}
+\index{HEAP_MINUS_INFINITY@{HEAP\_\-MINUS\_\-INFINITY}!heap.hpp@{heap.hpp}}
+\subsubsection[HEAP\_\-MINUS\_\-INFINITY]{\setlength{\rightskip}{0pt plus 5cm}\#define HEAP\_\-MINUS\_\-INFINITY~-1}}
+\label{heap_8hpp_423b8ed0ab54ed8b378e0871c4bb54a1}
+
+
+
+
+Definition at line 9 of file heap.hpp.
+
+Referenced by Tree\-Model::learn\-Structure().
+
+\subsection{Function Documentation}
+\hypertarget{heap_8hpp_9a7b5521ec847bff1af3dbe524f0b376}{
+\index{heap.hpp@{heap.hpp}!build_max_heap@{build\_\-max\_\-heap}}
+\index{build_max_heap@{build\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[build\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}int build\_\-max\_\-heap (int $\ast$ {\em a}, int $\ast$ {\em b}, double $\ast$ {\em x}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_9a7b5521ec847bff1af3dbe524f0b376}
+
+
+Build a max-heap for a given array. 
+
+
+
+Definition at line 19 of file heap.cpp.
+
+References max\_\-heapify().
+
+Referenced by Tree\-Model::learn\-Structure().
+
+\begin{Code}\begin{verbatim}20 {
+21   // builds a max-heap by max-heapifying all nodes with some children
+22 
+23   for (int i=(n>>1)-1; i>=0; i--)
+24     max_heapify(x,i,n,index,rev_index);
+25 
+26   // get back
+27 
+28   return n;
+29 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_33f6dccbcfc6a403dce7e8ab78a69af8}{
+\index{heap.hpp@{heap.hpp}!check_max_heap@{check\_\-max\_\-heap}}
+\index{check_max_heap@{check\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[check\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}int check\_\-max\_\-heap (double $\ast$ {\em x}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_33f6dccbcfc6a403dce7e8ab78a69af8}
+
+
+Check the max heap for errors (used mostly in debugging). 
+
+
+
+Definition at line 156 of file heap.cpp.
+
+\begin{Code}\begin{verbatim}157 {
+158   int ok=1;
+159 
+160   for (int i=0; (i<n)&&(ok); i++)
+161     {
+162       if (i*2+1<n)
+163         if (x[index[i]]<x[index[2*i+1]])
+164           ok=0;
+165 
+166       if (i*2+2<n)
+167         if (x[index[i]]<x[index[2*i+2]])
+168           ok=0;
+169     };
+170 
+171   if (ok==0)
+172     printf("not OK\n");
+173   else
+174     printf("OK\n");
+175 
+176   return ok;
+177 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_668e138412dbab3baf4e87d543f90870}{
+\index{heap.hpp@{heap.hpp}!float_up_max_heap@{float\_\-up\_\-max\_\-heap}}
+\index{float_up_max_heap@{float\_\-up\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[float\_\-up\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}int float\_\-up\_\-max\_\-heap (double $\ast$ {\em x}, int {\em i}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_668e138412dbab3baf4e87d543f90870}
+
+
+Float up an element up the heap (after increasing its value). 
+
+
+
+Definition at line 94 of file heap.cpp.
+
+References parent\_\-index.
+
+Referenced by increase\_\-key\_\-max\_\-heap().
+
+\begin{Code}\begin{verbatim}95 {
+96   double this_x=x[index[i]];
+97   int old_ii=index[i];
+98 
+99   int parent_idx=parent_index(i);
+100 
+101   while ((i>0)&&(this_x>x[index[parent_idx]]))
+102     {
+103       index[i]=index[parent_idx];
+104       rev_index[index[i]]=i;
+105       i=parent_idx;
+106       if (i>0)
+107         parent_idx=parent_index(i);
+108     };
+109 
+110   index[i]=old_ii;
+111   rev_index[index[i]]=i;
+112 
+113   return i;
+114 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_d33e06bba2950d85f9aca3f1a47d2a8e}{
+\index{heap.hpp@{heap.hpp}!increase_key_max_heap@{increase\_\-key\_\-max\_\-heap}}
+\index{increase_key_max_heap@{increase\_\-key\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[increase\_\-key\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}int increase\_\-key\_\-max\_\-heap (double $\ast$ {\em x}, int {\em i}, double {\em val}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_d33e06bba2950d85f9aca3f1a47d2a8e}
+
+
+Increase a given key in the heap. 
+
+
+
+Definition at line 83 of file heap.cpp.
+
+References float\_\-up\_\-max\_\-heap().
+
+Referenced by Tree\-Model::learn\-Structure().
+
+\begin{Code}\begin{verbatim}84 {
+85   x[i]=val;
+86   return float_up_max_heap(x,rev_index[i],n,index,rev_index);
+87 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_57de289144d3c948d6fcd8bb469e66f7}{
+\index{heap.hpp@{heap.hpp}!max_heapify@{max\_\-heapify}}
+\index{max_heapify@{max\_\-heapify}!heap.hpp@{heap.hpp}}
+\subsubsection[max\_\-heapify]{\setlength{\rightskip}{0pt plus 5cm}int max\_\-heapify (double $\ast$ {\em x}, int {\em i}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_57de289144d3c948d6fcd8bb469e66f7}
+
+
+Run max-heapify on a specified element of a heap (push down). 
+
+
+
+Definition at line 36 of file heap.cpp.
+
+References left\_\-child\_\-index.
+
+Referenced by build\_\-max\_\-heap(), and pop\_\-max\_\-heap().
+
+\begin{Code}\begin{verbatim}37 {
+38   double this_x=x[index[i]];
+39   int old_ii=index[i];
+40 
+41   int done=0;
+42   do {
+43     int c1=left_child_index(i);
+44     int c2=c1+1;
+45 
+46     int ic1=index[c1];
+47     
+48     if (c2<n)
+49       {
+50         int ic2=index[c2];
+51         
+52         if (x[ic1]<x[ic2])
+53           {
+54             ic1=ic2;
+55             c1=c2;
+56           };
+57       };
+58     
+59     if (x[ic1]>this_x)
+60       {
+61         index[i]=index[c1];
+62         rev_index[index[i]]=i;
+63         i=c1;
+64         if (left_child_index(i)>=n)
+65           done=1;
+66       }
+67     else
+68       done=1;
+69     
+70   } while (!done);
+71   
+72   index[i]=old_ii;
+73   rev_index[index[i]]=i;
+74 
+75   return i;
+76 };
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_9d9bfd1029dc45808a4eb11ef7e4d6fa}{
+\index{heap.hpp@{heap.hpp}!pop_max_heap@{pop\_\-max\_\-heap}}
+\index{pop_max_heap@{pop\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[pop\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}int pop\_\-max\_\-heap (double $\ast$ {\em x}, int \& {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_9d9bfd1029dc45808a4eb11ef7e4d6fa}
+
+
+Pop the maximum (includes the removal of maximum). 
+
+
+
+Definition at line 121 of file heap.cpp.
+
+References max\_\-heapify().
+
+Referenced by Tree\-Model::learn\-Structure().
+
+\begin{Code}\begin{verbatim}122 {
+123   n--;
+124   int val=index[0];
+125 
+126   index[0]=index[n];
+127   rev_index[index[n]]=0;
+128   max_heapify(x,0,n,index,rev_index);
+129 
+130   return val;
+131 }
+\end{verbatim}\end{Code}
+
+
+\hypertarget{heap_8hpp_4e2ff0b6f88983d968a8c17562fa7e19}{
+\index{heap.hpp@{heap.hpp}!print_max_heap@{print\_\-max\_\-heap}}
+\index{print_max_heap@{print\_\-max\_\-heap}!heap.hpp@{heap.hpp}}
+\subsubsection[print\_\-max\_\-heap]{\setlength{\rightskip}{0pt plus 5cm}void print\_\-max\_\-heap (double $\ast$ {\em x}, int {\em n}, int $\ast$ {\em index}, int $\ast$ {\em rev\_\-index})}}
+\label{heap_8hpp_4e2ff0b6f88983d968a8c17562fa7e19}
+
+
+Print the max heap (used mostly for debugging). 
+
+
+
+Definition at line 138 of file heap.cpp.
+
+\begin{Code}\begin{verbatim}139 {
+140   for (int i=0; i<n; i++)
+141     {
+142       printf("x[%u] = %5.3f (",i,x[index[i]]);
+143       if (i*2+1<n)
+144         printf("%5.3f ",x[index[2*i+1]]);
+145       if (i*2+2<n)
+146         printf("%5.3f ",x[index[2*i+2]]);
+147       printf(")\n");
+148     };
+149 }
+\end{verbatim}\end{Code}
+
+

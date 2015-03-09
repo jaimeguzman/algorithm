@@ -1,0 +1,142 @@
+\hypertarget{main_8cpp}{
+\section{main.cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+}
+Main function. 
+
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$string.h$>$}\par
+{\tt \#include \char`\"{}bisection.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}eda.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}heap.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}parse-input.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}random.hpp\char`\"{}}\par
+{\tt \#include \char`\"{}tree-model.hpp\char`\"{}}\par
+\subsection*{Functions}
+\begin{CompactItemize}
+\item 
+int \hyperlink{main_8cpp_3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{CompactList}\small\item\em The main function. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Main function. 
+
+
+
+Definition in file \hyperlink{main_8cpp-source}{main.cpp}.
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_3c04138a5bfe5d72780bb7e82a18e627}{
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\subsubsection[main]{\setlength{\rightskip}{0pt plus 5cm}int main (int {\em argc}, char $\ast$$\ast$ {\em argv})}}
+\label{main_8cpp_3c04138a5bfe5d72780bb7e82a18e627}
+
+
+The main function. 
+
+
+
+Definition at line 62 of file main.cpp.
+
+References bisection(), Parameters::bisection, Parameters::max\_\-generations, Parameters::num\_\-bisection\_\-runs, one\_\-run(), param\_\-help(), parse\_\-input\_\-file(), Parameters::population\_\-size, print\_\-bisection\_\-summary(), print\_\-parameters(), print\_\-summary(), Parameters::problem\_\-size, Parameters::quiet\_\-mode, Parameters::replacement, Parameters::tournament\_\-size, and Parameters::verbose\_\-mode.
+
+\begin{Code}\begin{verbatim}63 {
+64   Parameters params;
+65 
+66   // set default parameter values
+67 
+68   params.population_size=300;
+69   params.problem_size=25;
+70   params.max_generations=50;
+71   params.tournament_size=2;
+72   params.replacement=0;
+73   params.verbose_mode=0;
+74   params.quiet_mode=0;
+75   params.bisection=0;
+76   params.num_bisection_runs=20;
+77 
+78   // process input arguments
+79 
+80   if (argc>2)
+81     {
+82       printf("Expected only one command-line argument.\n");
+83       exit(-10);
+84     }
+85   else
+86   if (argc==2)
+87   {
+88     if ((strcmp(argv[1],"--help")==0)||
+89         (strcmp(argv[1],"-h")==0)||
+90         (strcmp(argv[1],"/help")==0)||
+91         (strcmp(argv[1],"/h")==0)||
+92         (strcmp(argv[1],"-?")==0)||
+93         (strcmp(argv[1],"/?")==0))
+94       {
+95         // help
+96 
+97         printf("Usage: dt-eda [parameter file name] [--help] [--version]\n\n");
+98         param_help();
+99         exit(0);
+100       }
+101     else 
+102     if ((strcmp(argv[1],"--version")==0)||
+103         (strcmp(argv[1],"-v")==0))
+104       {
+105         // version info
+106 
+107         printf("dt-eda-1.0\n");
+108         exit(0);
+109       }
+110     else
+111       {
+112         // parameter file
+113 
+114         FILE *f=fopen(argv[1],"r");
+115         if (f==NULL)
+116           {
+117             printf("ERROR: Could not open parameter file %s\n",argv[1]);
+118             exit(-1);
+119           }
+120 
+121         parse_input_file(f,&params);
+122         printf("Parameter file: %s\n",argv[1]);
+123       };
+124   }
+125   else
+126     printf("No parameter file: Using default parameters\n");
+127 
+128   // print the parameters
+129 
+130   print_parameters(&params);
+131 
+132   // perform one run of the dependency-tree EDA with the current parameters
+133   // and user defined functions (parameters from user-defined parameter files 
+134   // go first)
+135 
+136   if (params.bisection)
+137     {
+138       AveragePopulationStatistics avg_stats;
+139 
+140       bisection(&params,&avg_stats);
+141 
+142       print_bisection_summary(stdout,&avg_stats);
+143     }
+144   else
+145     {
+146       PopulationStatistics stats;
+147 
+148       one_run(&params,&stats);
+149 
+150       print_summary(&stats);
+151     };
+152 
+153   // get out
+154 
+155   return 0;
+156 }
+\end{verbatim}\end{Code}
+
+
